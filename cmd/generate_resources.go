@@ -196,7 +196,6 @@ type zoneAbbrev struct {
 var timezones = map[string]*zoneAbbrev{} // key = type eg. America_Eastern zone Abbrev eg. EST & EDT
 
 func main() {
-	fmt.Println("=== STARTING GENERATION PROCESS ===")
 
 	var err error
 
@@ -209,27 +208,12 @@ func main() {
 	// load CLDR recourses
 	var decoder cldr.Decoder
 
-	fmt.Println("Attempting to decode CLDR from: common")
 	cldr, err := decoder.DecodePath("common")
 	if err != nil {
 		panic("failed decode CLDR data; " + err.Error())
 	}
-	fmt.Println("CLDR data loaded successfully")
 
-	// Debug: check what the decoder found
-	allLocales := cldr.Locales()
-	fmt.Printf("Decoder found %d locales total\n", len(allLocales))
-	if len(allLocales) > 0 {
-		showCount := 5
-		if len(allLocales) < 5 {
-			showCount = len(allLocales)
-		}
-		fmt.Printf("First few locales: %v\n", allLocales[:showCount])
-	}
-
-	fmt.Println("Starting preProcess...")
 	preProcess(cldr)
-	fmt.Println("Starting postProcess...")
 	postProcess(cldr)
 
 	var currencies string
@@ -543,7 +527,6 @@ func applyOverrides(trans *translator) {
 }
 
 func postProcess(cldr *cldr.CLDR) {
-	fmt.Println("=== ENTERING postProcess ===")
 
 	for _, v := range timezones {
 
