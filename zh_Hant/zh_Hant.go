@@ -71,7 +71,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"西元前", "西元"},
 		erasNarrow:             []string{"西元前", "西元"},
 		erasWide:               []string{"西元前", "西元"},
-		timezones:              map[string]string{"ACDT": "澳洲中部夏令時間", "ACST": "澳洲中部標準時間", "ACWDT": "澳洲中西部夏令時間", "ACWST": "澳洲中西部標準時間", "ADT": "大西洋夏令時間", "AEDT": "澳洲東部夏令時間", "AEST": "澳洲東部標準時間", "AKDT": "阿拉斯加夏令時間", "AKST": "阿拉斯加標準時間", "ARST": "阿根廷夏令時間", "ART": "阿根廷標準時間", "AST": "大西洋標準時間", "AWDT": "澳洲西部夏令時間", "AWST": "澳洲西部標準時間", "BOT": "玻利維亞時間", "BT": "不丹時間", "CAT": "中非時間", "CDT": "中部夏令時間", "CHADT": "查坦群島夏令時間", "CHAST": "查坦群島標準時間", "CLST": "智利夏令時間", "CLT": "智利標準時間", "COST": "哥倫比亞夏令時間", "COT": "哥倫比亞標準時間", "CST": "中部標準時間", "ChST": "查莫洛時間", "EAT": "東非時間", "ECT": "厄瓜多時間", "EDT": "東部夏令時間", "EST": "東部標準時間", "GFT": "法屬圭亞那時間", "GMT": "格林威治標準時間", "GST": "波斯灣海域標準時間", "GYT": "蓋亞那時間", "HADT": "夏威夷-阿留申夏令時間", "HAST": "夏威夷-阿留申標準時間", "HAT": "紐芬蘭夏令時間", "HECU": "古巴夏令時間", "HEEG": "格陵蘭東部夏令時間", "HENOMX": "墨西哥西北部夏令時間", "HEOG": "格陵蘭西部夏令時間", "HEPM": "聖皮埃與密克隆群島夏令時間", "HEPMX": "墨西哥太平洋夏令時間", "HKST": "香港夏令時間", "HKT": "香港標準時間", "HNCU": "古巴標準時間", "HNEG": "格陵蘭東部標準時間", "HNNOMX": "墨西哥西北部標準時間", "HNOG": "格陵蘭西部標準時間", "HNPM": "聖皮埃與密克隆群島標準時間", "HNPMX": "墨西哥太平洋標準時間", "HNT": "紐芬蘭標準時間", "IST": "印度標準時間", "JDT": "日本夏令時間", "JST": "日本標準時間", "LHDT": "豪勳爵島夏令時間", "LHST": "豪勳爵島標準時間", "MDT": "山區夏令時間", "MESZ": "中歐夏令時間", "MEZ": "中歐標準時間", "MST": "山區標準時間", "MYT": "馬來西亞時間", "NZDT": "紐西蘭夏令時間", "NZST": "紐西蘭標準時間", "OESZ": "東歐夏令時間", "OEZ": "東歐標準時間", "PDT": "太平洋夏令時間", "PST": "太平洋標準時間", "SAST": "南非標準時間", "SGT": "新加坡標準時間", "SRT": "蘇利南時間", "TMST": "土庫曼夏令時間", "TMT": "土庫曼標準時間", "UYST": "烏拉圭夏令時間", "UYT": "烏拉圭標準時間", "VET": "委內瑞拉時間", "WARST": "阿根廷西部夏令時間", "WART": "阿根廷西部標準時間", "WAST": "西非夏令時間", "WAT": "西非標準時間", "WESZ": "西歐夏令時間", "WEZ": "西歐標準時間", "WIB": "印尼西部時間", "WIT": "印尼東部時間", "WITA": "印尼中部時間", "∅∅∅": "巴西利亞夏令時間"},
+		timezones:              map[string]string{"ACDT": "澳洲中部夏令時間", "ACST": "澳洲中部標準時間", "ACWDT": "澳洲中西部夏令時間", "ACWST": "澳洲中西部標準時間", "ADT": "大西洋夏令時間", "AEDT": "澳洲東部夏令時間", "AEST": "澳洲東部標準時間", "AKDT": "阿拉斯加夏令時間", "AKST": "阿拉斯加標準時間", "ARST": "阿根廷夏令時間", "ART": "阿根廷標準時間", "AST": "大西洋標準時間", "AWDT": "澳洲西部夏令時間", "AWST": "澳洲西部標準時間", "BOT": "玻利維亞時間", "BT": "不丹時間", "CAT": "中非時間", "CDT": "中部夏令時間", "CHADT": "查坦群島夏令時間", "CHAST": "查坦群島標準時間", "CLST": "智利夏令時間", "CLT": "智利標準時間", "COST": "哥倫比亞夏令時間", "COT": "哥倫比亞標準時間", "CST": "中部標準時間", "ChST": "查莫洛時間", "EAT": "東非時間", "ECT": "厄瓜多時間", "EDT": "東部夏令時間", "EST": "東部標準時間", "GFT": "法屬圭亞那時間", "GMT": "格林威治標準時間", "GST": "波斯灣海域標準時間", "GYT": "蓋亞那時間", "HADT": "夏威夷-阿留申夏令時間", "HAST": "夏威夷-阿留申標準時間", "HAT": "紐芬蘭夏令時間", "HECU": "古巴夏令時間", "HEEG": "格陵蘭東部夏令時間", "HENOMX": "墨西哥西北部夏令時間", "HEOG": "格陵蘭西部夏令時間", "HEPM": "聖皮埃與密克隆群島夏令時間", "HEPMX": "墨西哥太平洋夏令時間", "HKST": "香港夏令時間", "HKT": "香港標準時間", "HNCU": "古巴標準時間", "HNEG": "格陵蘭東部標準時間", "HNNOMX": "墨西哥西北部標準時間", "HNOG": "格陵蘭西部標準時間", "HNPM": "聖皮埃與密克隆群島標準時間", "HNPMX": "墨西哥太平洋標準時間", "HNT": "紐芬蘭標準時間", "IST": "印度標準時間", "JDT": "日本夏令時間", "JST": "日本標準時間", "LHDT": "豪勳爵島夏令時間", "LHST": "豪勳爵島標準時間", "MDT": "澳門夏令時間", "MESZ": "中歐夏令時間", "MEZ": "中歐標準時間", "MST": "澳門標準時間", "MYT": "馬來西亞時間", "NZDT": "紐西蘭夏令時間", "NZST": "紐西蘭標準時間", "OESZ": "東歐夏令時間", "OEZ": "東歐標準時間", "PDT": "太平洋夏令時間", "PST": "太平洋標準時間", "SAST": "南非標準時間", "SGT": "新加坡標準時間", "SRT": "蘇利南時間", "TMST": "土庫曼夏令時間", "TMT": "土庫曼標準時間", "UYST": "烏拉圭夏令時間", "UYT": "烏拉圭標準時間", "VET": "委內瑞拉時間", "WARST": "阿根廷西部夏令時間", "WART": "阿根廷西部標準時間", "WAST": "西非夏令時間", "WAT": "西非標準時間", "WESZ": "西歐夏令時間", "WEZ": "西歐標準時間", "WIB": "印尼西部時間", "WIT": "印尼東部時間", "WITA": "印尼中部時間", "∅∅∅": "秘魯夏令時間"},
 	}
 }
 
@@ -474,6 +474,35 @@ func (zh *zh_Hant) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'zh_Hant'
+func (zh *zh_Hant) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Month()), 10)
+	b = append(b, []byte{0xe6, 0x9c, 0x88}...)
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'zh_Hant'
+func (zh *zh_Hant) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	b = append(b, []byte{0xe5, 0xb9, 0xb4}...)
+	b = strconv.AppendInt(b, int64(t.Month()), 10)
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'zh_Hant'
 func (zh *zh_Hant) FmtTimeShort(t time.Time) string {
 
@@ -489,6 +518,8 @@ func (zh *zh_Hant) FmtTimeShort(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -518,6 +549,8 @@ func (zh *zh_Hant) FmtTimeMedium(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -554,6 +587,8 @@ func (zh *zh_Hant) FmtTimeLong(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -596,6 +631,8 @@ func (zh *zh_Hant) FmtTimeFull(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)

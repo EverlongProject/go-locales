@@ -942,6 +942,30 @@ func({{ .BaseLocale }} *{{ .Locale }}) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+{{- if gt (len .FmtMonthDayMedium) 0 }}
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for '{{ .Locale }}'
+func({{ .BaseLocale }} *{{ .Locale }}) FmtMonthDayMedium(t time.Time) string {
+	
+	b := make([]byte, 0, 32)
+
+	{{ .FmtMonthDayMedium }}
+
+	return string(b)
+}
+{{- end }}
+
+{{- if gt (len .FmtMonthYearMedium) 0 }}
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for '{{ .Locale }}'
+func({{ .BaseLocale }} *{{ .Locale }}) FmtMonthYearMedium(t time.Time) string {
+	
+	b := make([]byte, 0, 32)
+
+	{{ .FmtMonthYearMedium }}
+
+	return string(b)
+}
+{{- end }}
+
 // FmtTimeShort returns the short time representation of 't' for '{{ .Locale }}'
 func({{ .BaseLocale }} *{{ .Locale }}) FmtTimeShort(t time.Time) string {
 	

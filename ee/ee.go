@@ -71,7 +71,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"HYV", "Yŋ"},
 		erasNarrow:             []string{"hY", "Yŋ"},
 		erasWide:               []string{"", ""},
-		timezones:              map[string]string{"ACDT": "Australian Central dzomeli gaƒoƒo me", "ACST": "Australian Central nutome gaƒoƒo me", "ACWDT": "Australian Central Western kele gaƒoƒo me", "ACWST": "Australian Central Western nutome gaƒoƒo me", "ADT": "Atlantic kele gaƒoƒome", "AEDT": "Australian Eastern kele gaƒoƒo me", "AEST": "Australian Eastern nutome gaƒoƒo me", "AKDT": "Alaska kele gaƒoƒo me", "AKST": "Alaska nutome gaƒoƒo me", "ARST": "Argentina dzomeŋɔli gaƒoƒo me", "ART": "Argentina nutome gaƒoƒo me", "AST": "Atlantic nutome gaƒoƒome", "AWDT": "Australian Western kele gaƒoƒo me", "AWST": "Australian Western nutome gaƒoƒo me", "BOT": "Bolivia gaƒoƒo me", "BT": "Bhutan gaƒoƒo me", "CAT": "Central Africa gaƒoƒo me", "CDT": "Titina America kele gaƒoƒo me", "CHADT": "Chatham kele gaƒoƒo me", "CHAST": "Chatham nutome gaƒoƒo me", "CLST": "Chile dzomeŋɔli gaƒoƒo me", "CLT": "Chile nutome gaƒoƒo me", "COST": "Colombia dzomeŋɔli gaƒoƒo me", "COT": "Colombia nutome gaƒoƒo me", "CST": "Titina America nutome gaƒoƒo me", "ChST": "Chamorro gaƒoƒo me", "EAT": "East Africa gaƒoƒo me", "ECT": "Ecuador gaƒoƒo me", "EDT": "Eastern America kele gaƒoƒo me", "EST": "Eastern America nutome gaƒoƒo me", "GFT": "French Guiana gaƒoƒo me", "GMT": "Greenwich gaƒoƒo me", "GST": "Gulf nutome gaƒoƒo me", "GYT": "Guyana gaƒoƒo me", "HADT": "Hawaii-Aleutia kele gaƒoƒo me", "HAST": "Hawaii-Aleutia nutome gaƒoƒo me", "HAT": "Newfoundland kele gaƒoƒome", "HECU": "Cuba kele gaƒoƒome", "HEEG": "East Greenland dzomeŋɔli gaƒoƒo me", "HENOMX": "Northwest Mexico kele gaƒoƒo me", "HEOG": "West Greenland kele gaƒoƒo me", "HEPM": "St. Pierre & Miquelon kele gaƒoƒome", "HEPMX": "Mexican Pacific kele gaƒoƒome", "HKST": "Hong Kong dzomeŋɔli gaƒoƒo me", "HKT": "Hong Kong nutome gaƒoƒo me", "HNCU": "Cuba nutome gaƒoƒome", "HNEG": "East Greenland nutome gaƒoƒo me", "HNNOMX": "Northwest Mexico nutome gaƒoƒo me", "HNOG": "West Greenland nutome gaƒoƒo me", "HNPM": "St. Pierre & Miquelon nutome gaƒoƒome", "HNPMX": "Mexican Pacific nutome gaƒoƒo me", "HNT": "Newfoundland nutome gaƒoƒome", "IST": "India gaƒoƒo me", "JDT": "Japan dzomeŋɔli gaƒoƒo me", "JST": "Japan nutome gaƒoƒo me", "LHDT": "Lord Howe kele gaƒoƒo me", "LHST": "Lord Howe nutome gaƒoƒo me", "MDT": "Mountain kele gaƒoƒo me", "MESZ": "Central Europe dzomeŋɔli gaƒoƒo me", "MEZ": "Central Europe nutome gaƒoƒo me", "MST": "Mountain nutome gaƒoƒo me", "MYT": "Malaysia gaƒoƒo me", "NZDT": "New Zealand kele gaƒoƒo me", "NZST": "New Zealand nutome gaƒoƒo me", "OESZ": "Ɣedzeƒe Europe ŋkekeme gaƒoƒome", "OEZ": "Ɣedzeƒe Europe gaƒoƒoɖoanyime", "PDT": "Pacific kele gaƒoƒo me", "PST": "Pacific nutome gaƒoƒo me", "SAST": "South Africa nutome gaƒoƒo me", "SGT": "Singapore nutome gaƒoƒo me", "SRT": "Suriname gaƒoƒome", "TMST": "Turkmenistan dzomeŋɔli gaƒoƒo me", "TMT": "Turkmenistan nutome gaƒoƒo me", "UYST": "Uruguay dzomeŋɔli gaƒoƒo me", "UYT": "Uruguay nutome gaƒoƒo me", "VET": "Venezuela gaƒoƒo me", "WARST": "Ɣetoɖoƒe Argentina dzomeŋɔli gaƒoƒo me", "WART": "Ɣetoɖoƒe Argentina nutome gaƒoƒo me", "WAST": "West Africa dzomeŋɔli gaƒoƒo me", "WAT": "West Africa nutome gaƒoƒo me", "WESZ": "Western Europe dzomeŋɔli gaƒoƒo me", "WEZ": "Western Europe nutome gaƒoƒo me", "WIB": "Western Indonesia gaƒoƒo me", "WIT": "Eastern Indonesia gaƒoƒo me", "WITA": "Central Indonesia gaƒoƒo me", "∅∅∅": "Peru dzomeŋɔli gaƒoƒome"},
+		timezones:              map[string]string{"ACDT": "Australian Central dzomeli gaƒoƒo me", "ACST": "Australian Central nutome gaƒoƒo me", "ACWDT": "Australian Central Western kele gaƒoƒo me", "ACWST": "Australian Central Western nutome gaƒoƒo me", "ADT": "Atlantic kele gaƒoƒome", "AEDT": "Australian Eastern kele gaƒoƒo me", "AEST": "Australian Eastern nutome gaƒoƒo me", "AKDT": "Alaska kele gaƒoƒo me", "AKST": "Alaska nutome gaƒoƒo me", "ARST": "Argentina dzomeŋɔli gaƒoƒo me", "ART": "Argentina nutome gaƒoƒo me", "AST": "Atlantic nutome gaƒoƒome", "AWDT": "Australian Western kele gaƒoƒo me", "AWST": "Australian Western nutome gaƒoƒo me", "BOT": "Bolivia gaƒoƒo me", "BT": "Bhutan gaƒoƒo me", "CAT": "Central Africa gaƒoƒo me", "CDT": "Titina America kele gaƒoƒo me", "CHADT": "Chatham kele gaƒoƒo me", "CHAST": "Chatham nutome gaƒoƒo me", "CLST": "Chile dzomeŋɔli gaƒoƒo me", "CLT": "Chile nutome gaƒoƒo me", "COST": "Colombia dzomeŋɔli gaƒoƒo me", "COT": "Colombia nutome gaƒoƒo me", "CST": "Titina America nutome gaƒoƒo me", "ChST": "Chamorro gaƒoƒo me", "EAT": "East Africa gaƒoƒo me", "ECT": "Ecuador gaƒoƒo me", "EDT": "Eastern America kele gaƒoƒo me", "EST": "Eastern America nutome gaƒoƒo me", "GFT": "French Guiana gaƒoƒo me", "GMT": "Greenwich gaƒoƒo me", "GST": "Gulf nutome gaƒoƒo me", "GYT": "Guyana gaƒoƒo me", "HADT": "Hawaii-Aleutia kele gaƒoƒo me", "HAST": "Hawaii-Aleutia nutome gaƒoƒo me", "HAT": "Newfoundland kele gaƒoƒome", "HECU": "Cuba kele gaƒoƒome", "HEEG": "East Greenland dzomeŋɔli gaƒoƒo me", "HENOMX": "Northwest Mexico kele gaƒoƒo me", "HEOG": "West Greenland kele gaƒoƒo me", "HEPM": "St. Pierre & Miquelon kele gaƒoƒome", "HEPMX": "Mexican Pacific kele gaƒoƒome", "HKST": "Hong Kong dzomeŋɔli gaƒoƒo me", "HKT": "Hong Kong nutome gaƒoƒo me", "HNCU": "Cuba nutome gaƒoƒome", "HNEG": "East Greenland nutome gaƒoƒo me", "HNNOMX": "Northwest Mexico nutome gaƒoƒo me", "HNOG": "West Greenland nutome gaƒoƒo me", "HNPM": "St. Pierre & Miquelon nutome gaƒoƒome", "HNPMX": "Mexican Pacific nutome gaƒoƒo me", "HNT": "Newfoundland nutome gaƒoƒome", "IST": "India gaƒoƒo me", "JDT": "Japan dzomeŋɔli gaƒoƒo me", "JST": "Japan nutome gaƒoƒo me", "LHDT": "Lord Howe kele gaƒoƒo me", "LHST": "Lord Howe nutome gaƒoƒo me", "MDT": "Makau ŋkekeme gaƒoƒome", "MESZ": "Central Europe dzomeŋɔli gaƒoƒo me", "MEZ": "Central Europe nutome gaƒoƒo me", "MST": "Makau gaƒoƒoɖoanyime", "MYT": "Malaysia gaƒoƒo me", "NZDT": "New Zealand kele gaƒoƒo me", "NZST": "New Zealand nutome gaƒoƒo me", "OESZ": "Ɣedzeƒe Europe ŋkekeme gaƒoƒome", "OEZ": "Ɣedzeƒe Europe gaƒoƒoɖoanyime", "PDT": "Pacific kele gaƒoƒo me", "PST": "Pacific nutome gaƒoƒo me", "SAST": "South Africa nutome gaƒoƒo me", "SGT": "Singapore nutome gaƒoƒo me", "SRT": "Suriname gaƒoƒome", "TMST": "Turkmenistan dzomeŋɔli gaƒoƒo me", "TMT": "Turkmenistan nutome gaƒoƒo me", "UYST": "Uruguay dzomeŋɔli gaƒoƒo me", "UYT": "Uruguay nutome gaƒoƒo me", "VET": "Venezuela gaƒoƒo me", "WARST": "Ɣetoɖoƒe Argentina dzomeŋɔli gaƒoƒo me", "WART": "Ɣetoɖoƒe Argentina nutome gaƒoƒo me", "WAST": "West Africa dzomeŋɔli gaƒoƒo me", "WAT": "West Africa nutome gaƒoƒo me", "WESZ": "Western Europe dzomeŋɔli gaƒoƒo me", "WEZ": "Western Europe nutome gaƒoƒo me", "WIB": "Western Indonesia gaƒoƒo me", "WIT": "Eastern Indonesia gaƒoƒo me", "WITA": "Central Indonesia gaƒoƒo me", "∅∅∅": "Eker dzomeŋɔli gaƒoƒome"},
 	}
 }
 
@@ -482,6 +482,37 @@ func (ee *ee) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'ee'
+func (ee *ee) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, ee.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'ee'
+func (ee *ee) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, ee.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x20, 0x6c, 0x69, 0x61}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'ee'
 func (ee *ee) FmtTimeShort(t time.Time) string {
 
@@ -500,6 +531,8 @@ func (ee *ee) FmtTimeShort(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -532,6 +565,8 @@ func (ee *ee) FmtTimeMedium(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -571,6 +606,8 @@ func (ee *ee) FmtTimeLong(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -614,6 +651,8 @@ func (ee *ee) FmtTimeFull(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)

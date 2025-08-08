@@ -66,14 +66,13 @@ var (
 	wModRegex              = regexp.MustCompile("(w%[0-9]+)")
 	fModRegex              = regexp.MustCompile("(f%[0-9]+)")
 	tModRegex              = regexp.MustCompile("(t%[0-9]+)")
-	groupLenRegex          = regexp.MustCompile(",([0-9#]+)\\.")
-	groupLenPercentRegex   = regexp.MustCompile(",([0-9#]+)$")
-	secondaryGroupLenRegex = regexp.MustCompile(",([0-9#]+),")
-	requiredNumRegex       = regexp.MustCompile("([0-9]+)\\.")
-	requiredDecimalRegex   = regexp.MustCompile("\\.([0-9]+)")
+	groupLenRegex          = regexp.MustCompile(`,([0-9#]+)\.`)
+	groupLenPercentRegex   = regexp.MustCompile(`,([0-9#]+)$`)
+	secondaryGroupLenRegex = regexp.MustCompile(`,([0-9#]+),`)
+	requiredDecimalRegex   = regexp.MustCompile(`\.([0-9]+)`)
 
 	enInheritance = map[string]string{
-		"en_150": "en_001", "en_AG": "en_001", "en_AI": "en_001", "en_AU": "en_001", "en_BB": "en_001", "en_BE": "en_001", "en_BM": "en_001", "en_BS": "en_001", "en_BW": "en_001", "en_BZ": "en_001", "en_CA": "en_001", "en_CC": "en_001", "en_CK": "en_001", "en_CM": "en_001", "en_CX": "en_001", "en_CY": "en_001", "en_DG": "en_001", "en_DM": "en_001", "en_ER": "en_001", "en_FJ": "en_001", "en_FK": "en_001", "en_FM": "en_001", "en_GB": "en_001", "en_GD": "en_001", "en_GG": "en_001", "en_GH": "en_001", "en_GI": "en_001", "en_GM": "en_001", "en_GY": "en_001", "en_HK": "en_001", "en_IE": "en_001", "en_IL": "en_001", "en_IM": "en_001", "en_IN": "en_001", "en_IO": "en_001", "en_JE": "en_001", "en_JM": "en_001", "en_KE": "en_001", "en_KI": "en_001", "en_KN": "en_001", "en_KY": "en_001", "en_LC": "en_001", "en_LR": "en_001", "en_LS": "en_001", "en_MG": "en_001", "en_MO": "en_001", "en_MS": "en_001", "en_MT": "en_001", "en_MU": "en_001", "en_MW": "en_001", "en_MY": "en_001", "en_NA": "en_001", "en_NF": "en_001", "en_NG": "en_001", "en_NR": "en_001", "en_NU": "en_001", "en_NZ": "en_001", "en_PG": "en_001", "en_PH": "en_001", "en_PK": "en_001", "en_PN": "en_001", "en_PW": "en_001", "en_RW": "en_001", "en_SB": "en_001", "en_SC": "en_001", "en_SD": "en_001", "en_SG": "en_001", "en_SH": "en_001", "en_SL": "en_001", "en_SS": "en_001", "en_SX": "en_001", "en_SZ": "en_001", "en_TC": "en_001", "en_TK": "en_001", "en_TO": "en_001", "en_TT": "en_001", "en_TV": "en_001", "en_TZ": "en_001", "en_UG": "en_001", "en_VC": "en_001", "en_VG": "en_001", "en_VU": "en_001", "en_WS": "en_001", "en_ZA": "en_001", "en_ZM": "en_001", "en_ZW": "en_001", }
+		"en_150": "en_001", "en_AG": "en_001", "en_AI": "en_001", "en_AU": "en_001", "en_BB": "en_001", "en_BE": "en_001", "en_BM": "en_001", "en_BS": "en_001", "en_BW": "en_001", "en_BZ": "en_001", "en_CA": "en_001", "en_CC": "en_001", "en_CK": "en_001", "en_CM": "en_001", "en_CX": "en_001", "en_CY": "en_001", "en_DG": "en_001", "en_DM": "en_001", "en_ER": "en_001", "en_FJ": "en_001", "en_FK": "en_001", "en_FM": "en_001", "en_GB": "en_001", "en_GD": "en_001", "en_GG": "en_001", "en_GH": "en_001", "en_GI": "en_001", "en_GM": "en_001", "en_GY": "en_001", "en_HK": "en_001", "en_IE": "en_001", "en_IL": "en_001", "en_IM": "en_001", "en_IN": "en_001", "en_IO": "en_001", "en_JE": "en_001", "en_JM": "en_001", "en_KE": "en_001", "en_KI": "en_001", "en_KN": "en_001", "en_KY": "en_001", "en_LC": "en_001", "en_LR": "en_001", "en_LS": "en_001", "en_MG": "en_001", "en_MO": "en_001", "en_MS": "en_001", "en_MT": "en_001", "en_MU": "en_001", "en_MW": "en_001", "en_MY": "en_001", "en_NA": "en_001", "en_NF": "en_001", "en_NG": "en_001", "en_NR": "en_001", "en_NU": "en_001", "en_NZ": "en_001", "en_PG": "en_001", "en_PH": "en_001", "en_PK": "en_001", "en_PN": "en_001", "en_PW": "en_001", "en_RW": "en_001", "en_SB": "en_001", "en_SC": "en_001", "en_SD": "en_001", "en_SG": "en_001", "en_SH": "en_001", "en_SL": "en_001", "en_SS": "en_001", "en_SX": "en_001", "en_SZ": "en_001", "en_TC": "en_001", "en_TK": "en_001", "en_TO": "en_001", "en_TT": "en_001", "en_TV": "en_001", "en_TZ": "en_001", "en_UG": "en_001", "en_VC": "en_001", "en_VG": "en_001", "en_VU": "en_001", "en_WS": "en_001", "en_ZA": "en_001", "en_ZM": "en_001", "en_ZW": "en_001"}
 	en150Inheritance = map[string]string{"en_AT": "en_150", "en_CH": "en_150", "en_DE": "en_150", "en_DK": "en_150", "en_FI": "en_150", "en_NL": "en_150", "en_SE": "en_150", "en_SI": "en_150"}
 	es419Inheritance = map[string]string{
 		"es_AR": "es_419", "es_BO": "es_419", "es_BR": "es_419", "es_BZ": "es_419", "es_CL": "es_419", "es_CO": "es_419", "es_CR": "es_419", "es_CU": "es_419", "es_DO": "es_419", "es_EC": "es_419", "es_GT": "es_419", "es_HN": "es_419", "es_MX": "es_419", "es_NI": "es_419", "es_PA": "es_419", "es_PE": "es_419", "es_PR": "es_419", "es_PY": "es_419", "es_SV": "es_419", "es_US": "es_419", "es_UY": "es_419", "es_VE": "es_419",
@@ -88,7 +87,7 @@ var (
 		"zh_Hant_MO": "zh_Hant_HK",
 	}
 
-	inheritMaps = []map[string]string{ enInheritance, en150Inheritance, es419Inheritance, rootInheritance, ptPtInheritance, zhHantHKInheritance}
+	inheritMaps = []map[string]string{enInheritance, en150Inheritance, es419Inheritance, rootInheritance, ptPtInheritance, zhHantHKInheritance}
 )
 
 type translator struct {
@@ -148,6 +147,9 @@ type translator struct {
 	FmtMonthsNarrow      string
 	FmtMonthsWide        string
 
+	FmtMonthDayMedium  string
+	FmtMonthYearMedium string
+
 	FmtDaysAbbreviated string
 	FmtDaysNarrow      string
 	FmtDaysShort       string
@@ -194,6 +196,7 @@ type zoneAbbrev struct {
 var timezones = map[string]*zoneAbbrev{} // key = type eg. America_Eastern zone Abbrev eg. EST & EDT
 
 func main() {
+	fmt.Println("=== STARTING GENERATION PROCESS ===")
 
 	var err error
 
@@ -206,12 +209,27 @@ func main() {
 	// load CLDR recourses
 	var decoder cldr.Decoder
 
-	cldr, err := decoder.DecodePath("data/core")
+	fmt.Println("Attempting to decode CLDR from: common")
+	cldr, err := decoder.DecodePath("common")
 	if err != nil {
 		panic("failed decode CLDR data; " + err.Error())
 	}
+	fmt.Println("CLDR data loaded successfully")
 
+	// Debug: check what the decoder found
+	allLocales := cldr.Locales()
+	fmt.Printf("Decoder found %d locales total\n", len(allLocales))
+	if len(allLocales) > 0 {
+		showCount := 5
+		if len(allLocales) < 5 {
+			showCount = len(allLocales)
+		}
+		fmt.Printf("First few locales: %v\n", allLocales[:showCount])
+	}
+
+	fmt.Println("Starting preProcess...")
 	preProcess(cldr)
+	fmt.Println("Starting postProcess...")
 	postProcess(cldr)
 
 	var currencies string
@@ -321,14 +339,211 @@ func main() {
 	}
 }
 
+// CurrencyMapping defines the symbol replacements for different currency codes
+type CurrencyMapping struct {
+	CAD string
+	USD string
+	AUD string
+	GBP string
+	EUR string
+}
+
+// getCurrencyMappingForLocale returns the appropriate currency mapping based on locale
+func getCurrencyMappingForLocale(locale string) CurrencyMapping {
+	// Normalize locale to lowercase for comparison
+	localeKey := strings.ToLower(locale)
+
+	// Check if locale is CA-related (Canada) - special case for fr_CA
+	if strings.HasSuffix(localeKey, "_ca") {
+		return CurrencyMapping{
+			CAD: "$",   // CAD -> $
+			USD: "US$", // USD -> $ US
+			AUD: "AU$", // AUD -> $ AU
+			GBP: "£",   // GBP -> £
+			EUR: "€",   // EUR -> €
+		}
+	}
+
+	// Check if locale is French-related (but not fr_CA)
+	if strings.HasPrefix(localeKey, "fr") {
+		return CurrencyMapping{
+			CAD: "$CA", // CAD -> $CA
+			USD: "$US", // USD -> $US
+			AUD: "$AU", // AUD -> $AU
+			GBP: "£",   // GBP -> £
+			EUR: "€",   // EUR -> €
+		}
+	}
+
+	// Check if locale is AU-related (Australia)
+	if strings.HasSuffix(localeKey, "_au") {
+		return CurrencyMapping{
+			CAD: "CA$", // CAD -> CA$
+			USD: "US$", // USD -> US$
+			AUD: "$",   // AUD -> $
+			GBP: "£",   // GBP -> £
+			EUR: "€",   // EUR -> €
+		}
+	}
+
+	// Check if locale is US-related (United States)
+	if strings.HasSuffix(localeKey, "_us") || strings.HasSuffix(localeKey, "_us_posix") {
+		return CurrencyMapping{
+			CAD: "CA$", // CAD -> CA$
+			USD: "$",   // USD -> $
+			AUD: "AU$", // AUD -> AU$
+			GBP: "£",   // GBP -> £
+			EUR: "€",   // EUR -> €
+		}
+	}
+
+	// Default for all other locales
+	return CurrencyMapping{
+		CAD: "CA$", // CAD -> CA$
+		USD: "US$", // USD -> US$
+		AUD: "AU$", // AUD -> AU$
+		GBP: "£",   // GBP -> £
+		EUR: "€",   // EUR -> €
+	}
+}
+
+// applyCurrencyOverrides applies currency symbol overrides based on locale
+func applyCurrencyOverrides(trans *translator) {
+	mapping := getCurrencyMappingForLocale(trans.Locale)
+
+	// The trans.Currencies is already in the format: []string{"ADP", "AED", ...}
+	// We need to parse it and apply the currency mappings
+	currenciesStr := trans.Currencies
+
+	// Extract the content between the curly braces
+	startIdx := strings.Index(currenciesStr, "{")
+	endIdx := strings.LastIndex(currenciesStr, "}")
+
+	if startIdx == -1 || endIdx == -1 || startIdx >= endIdx {
+		return // Invalid format, skip
+	}
+
+	content := currenciesStr[startIdx+1 : endIdx]
+	if strings.TrimSpace(content) == "" {
+		return // Empty currencies array
+	}
+
+	// Apply currency replacements using string replacement
+	// This is more reliable than parsing the individual items
+	currencyReplacements := map[string]string{
+		`"CAD"`: fmt.Sprintf(`"%s"`, mapping.CAD),
+		`"USD"`: fmt.Sprintf(`"%s"`, mapping.USD),
+		`"AUD"`: fmt.Sprintf(`"%s"`, mapping.AUD),
+		`"GBP"`: fmt.Sprintf(`"%s"`, mapping.GBP),
+		`"EUR"`: fmt.Sprintf(`"%s"`, mapping.EUR),
+	}
+
+	// Apply replacements
+	updatedContent := content
+	for oldCurrency, newCurrency := range currencyReplacements {
+		updatedContent = strings.ReplaceAll(updatedContent, oldCurrency, newCurrency)
+	}
+
+	// Reconstruct the currencies string
+	trans.Currencies = fmt.Sprintf("[]string{%s}", updatedContent)
+}
+
+// applyPeriodOverrides updates "a.m." and "p.m." to "am" and "pm" across all period formats
+func applyPeriodOverrides(trans *translator) {
+
+	amPattern := "a.m."
+	pmPattern := "p.m."
+
+	// Update periodsAbbreviated
+	if strings.Contains(trans.FmtPeriodsAbbreviated, amPattern) {
+		trans.FmtPeriodsAbbreviated = strings.ReplaceAll(trans.FmtPeriodsAbbreviated, amPattern, "am")
+		trans.FmtPeriodsAbbreviated = strings.ReplaceAll(trans.FmtPeriodsAbbreviated, pmPattern, "pm")
+	}
+
+	// Update periodsNarrow
+	if strings.Contains(trans.FmtPeriodsNarrow, amPattern) {
+		trans.FmtPeriodsNarrow = strings.ReplaceAll(trans.FmtPeriodsNarrow, amPattern, "am")
+		trans.FmtPeriodsNarrow = strings.ReplaceAll(trans.FmtPeriodsNarrow, pmPattern, "pm")
+	}
+
+	// Update periodsWide
+	if strings.Contains(trans.FmtPeriodsWide, amPattern) {
+		trans.FmtPeriodsWide = strings.ReplaceAll(trans.FmtPeriodsWide, amPattern, "am")
+		trans.FmtPeriodsWide = strings.ReplaceAll(trans.FmtPeriodsWide, pmPattern, "pm")
+	}
+}
+
+// applyCurrencySuffixOverrides systematically replaces " k" suffixes with " " in currency formatting
+func applyCurrencySuffixOverrides(trans *translator) {
+	// Pattern to find and replace: " k" -> " "
+	kSuffixPattern := " k"
+	spaceSuffix := " "
+
+	// Update FmtCurrencySuffix (positive currency suffix)
+	if strings.HasSuffix(trans.FmtCurrencySuffix, kSuffixPattern) {
+		trans.FmtCurrencySuffix = strings.ReplaceAll(trans.FmtCurrencySuffix, kSuffixPattern, spaceSuffix)
+	}
+
+	// Update FmtCurrencyNegativeSuffix (negative currency suffix)
+	if strings.HasSuffix(trans.FmtCurrencyNegativeSuffix, kSuffixPattern) {
+		trans.FmtCurrencyNegativeSuffix = strings.ReplaceAll(trans.FmtCurrencyNegativeSuffix, kSuffixPattern, spaceSuffix)
+	}
+}
+
+// applyMonthAbbreviationOverrides removes periods from month abbreviations for English-related locales
+func applyMonthAbbreviationOverrides(trans *translator) {
+	// Check if this is an English-related locale
+	isEnglishRelated := false
+
+	// Direct English locales (en, en_US, en_GB, etc.)
+	if strings.HasPrefix(trans.Locale, "en") || strings.HasPrefix(trans.BaseLocale, "en") {
+		isEnglishRelated = true
+	}
+
+	// Check inheritance maps for English-related locales
+	if !isEnglishRelated {
+		for _, inheritMap := range inheritMaps {
+			if inherit, found := inheritMap[trans.Locale]; found {
+				if strings.HasPrefix(inherit, "en") {
+					isEnglishRelated = true
+					break
+				}
+			}
+		}
+	}
+
+	// Only apply to English-related locales
+	if !isEnglishRelated {
+		return
+	}
+
+	// Remove periods from month abbreviations only
+	if strings.Contains(trans.FmtMonthsAbbreviated, ".") {
+		trans.FmtMonthsAbbreviated = strings.ReplaceAll(trans.FmtMonthsAbbreviated, ".", "")
+	}
+}
+
 func applyOverrides(trans *translator) {
 
 	if trans.BaseLocale == "ru" {
 		trans.PercentNumberFormat = "#,##0%"
 	}
+
+	// Apply currency symbol overrides for all locales
+	applyCurrencyOverrides(trans)
+
+	// Apply period overrides (a.m./p.m. -> am/pm) for all locales
+	applyPeriodOverrides(trans)
+
+	// Apply currency suffix overrides (" k" -> " ") for all locales
+	applyCurrencySuffixOverrides(trans)
+
+	// Apply month abbreviation overrides (remove periods) for English-related locales
+	applyMonthAbbreviationOverrides(trans)
 }
 
 func postProcess(cldr *cldr.CLDR) {
+	fmt.Println("=== ENTERING postProcess ===")
 
 	for _, v := range timezones {
 
@@ -363,10 +578,10 @@ func postProcess(cldr *cldr.CLDR) {
 
 			inheritedFound = false
 
-			for _, inheritMap := range(inheritMaps) {
+			for _, inheritMap := range inheritMaps {
 				if inherit, found := inheritMap[trans.Locale]; found {
 					inherited, inheritedFound = translators[inherit]
-					break;
+					break
 				}
 			}
 
@@ -596,6 +811,26 @@ func postProcess(cldr *cldr.CLDR) {
 			trans.FmtMonthsWide = base.FmtMonthsWide
 		}
 
+		// month day medium values
+
+		if len(trans.FmtMonthDayMedium) == 0 && inheritedFound {
+			trans.FmtMonthDayMedium = inherited.FmtMonthDayMedium
+		}
+
+		if len(trans.FmtMonthDayMedium) == 0 && baseFound {
+			trans.FmtMonthDayMedium = base.FmtMonthDayMedium
+		}
+
+		// month year medium values
+
+		if len(trans.FmtMonthYearMedium) == 0 && inheritedFound {
+			trans.FmtMonthYearMedium = inherited.FmtMonthYearMedium
+		}
+
+		if len(trans.FmtMonthYearMedium) == 0 && baseFound {
+			trans.FmtMonthYearMedium = base.FmtMonthYearMedium
+		}
+
 		// day values
 
 		if len(trans.FmtDaysAbbreviated) == 0 && inheritedFound {
@@ -692,7 +927,7 @@ func postProcess(cldr *cldr.CLDR) {
 
 		ldml := cldr.RawLDML(trans.Locale)
 
-		currencies := make([]string, len(globalCurrencies), len(globalCurrencies))
+		currencies := make([]string, len(globalCurrencies))
 
 		var kval string
 
@@ -733,11 +968,11 @@ func postProcess(cldr *cldr.CLDR) {
 
 		// timezones
 
-		if (trans.timezones == nil || len(trans.timezones) == 0) && inheritedFound {
+		if len(trans.timezones) == 0 && inheritedFound {
 			trans.timezones = inherited.timezones
 		}
 
-		if (trans.timezones == nil || len(trans.timezones) == 0) && baseFound {
+		if len(trans.timezones) == 0 && baseFound {
 			trans.timezones = base.timezones
 		}
 
@@ -778,6 +1013,7 @@ func postProcess(cldr *cldr.CLDR) {
 		parseCurrencyNumberFormat(trans)
 	}
 
+	fmt.Printf("=== FINAL PROCESSING LOOP: Found %d translators ===\n", len(translators))
 	for _, trans := range translators {
 
 		fmt.Println("Final Processing:", trans.Locale)
@@ -807,15 +1043,24 @@ func postProcess(cldr *cldr.CLDR) {
 			trans.TimeSeparator = ":"
 		}
 
+		// Generate month-day and month-year patterns from the raw medium date format BEFORE processing
+		if trans.FmtDateMedium != "" {
+			trans.FmtMonthDayMedium = parseMonthDayFormat(trans.BaseLocale, trans.FmtDateMedium)
+			trans.FmtMonthYearMedium = parseMonthYearFormat(trans.BaseLocale, trans.FmtDateMedium)
+		}
+
 		trans.FmtDateShort, trans.FmtDateMedium, trans.FmtDateLong, trans.FmtDateFull = parseDateFormats(trans, trans.FmtDateShort, trans.FmtDateMedium, trans.FmtDateLong, trans.FmtDateFull)
 		trans.FmtTimeShort, trans.FmtTimeMedium, trans.FmtTimeLong, trans.FmtTimeFull = parseDateFormats(trans, trans.FmtTimeShort, trans.FmtTimeMedium, trans.FmtTimeLong, trans.FmtTimeFull)
+
 	}
 }
 
 // preprocesses maps, array etc... just requires multiple passes no choice....
 func preProcess(cldrVar *cldr.CLDR) {
+	locales := cldrVar.Locales()
+	fmt.Printf("=== preProcess: Found %d locales ===\n", len(locales))
 
-	for _, l := range cldrVar.Locales() {
+	for _, l := range locales {
 
 		fmt.Println("Pre Processing:", l)
 
@@ -843,6 +1088,7 @@ func preProcess(cldrVar *cldr.CLDR) {
 		// baseTranslators[l] = trans
 		// baseTranslators[baseLocale] = trans // allowing for unofficial fallback if none exists
 		translators[l] = trans
+		fmt.Printf("Added translator for locale: %s\n", l)
 
 		// get number, currency and datetime symbols
 
@@ -1203,7 +1449,7 @@ func preProcess(cldrVar *cldr.CLDR) {
 
 								// [0] = AM
 								// [0] = PM
-								ampm := make([]string, 2, 2)
+								ampm := make([]string, 2)
 
 								for _, d := range width.DayPeriod {
 
@@ -1247,9 +1493,9 @@ func preProcess(cldrVar *cldr.CLDR) {
 
 						// [0] = BC
 						// [0] = AD
-						abbrev := make([]string, 2, 2)
-						narr := make([]string, 2, 2)
-						wide := make([]string, 2, 2)
+						abbrev := make([]string, 2)
+						narr := make([]string, 2)
+						wide := make([]string, 2)
 
 						if calendar.Eras.EraAbbr != nil {
 
@@ -1420,6 +1666,8 @@ func parseDateTimeFormat(baseLocale, format string, eraScore uint8) (results str
 
 				if h > 12 {
 					h -= 12
+				} else if h == 0 {
+					h = 12
 				}
 
 			`
@@ -1925,8 +2173,6 @@ func parseCurrencyNumberFormat(trans *translator) {
 	// if len(trans.FmtCurrencyNegativeSuffix) > 0 {
 	// 	trans.FmtCurrencyNegativeSuffix = fmt.Sprintf("%#v", []byte(trans.FmtCurrencyNegativeSuffix))
 	// }
-
-	return
 }
 
 func parsePercentNumberFormat(trans *translator) {
@@ -2008,8 +2254,6 @@ func parsePercentNumberFormat(trans *translator) {
 	// if len(trans.FmtPercentSuffix) > 0 {
 	// 	trans.FmtPercentSuffix = fmt.Sprintf("%#v", []byte(trans.FmtPercentSuffix))
 	// }
-
-	return
 }
 
 func parseDecimalNumberFormat(trans *translator) {
@@ -2036,8 +2280,6 @@ func parseDecimalNumberFormat(trans *translator) {
 	if len(match) > 0 {
 		trans.FmtNumberSecondaryGroupLen = len(match) - 2
 	}
-
-	return
 }
 
 type sortRank struct {
@@ -2892,4 +3134,139 @@ func pluralStringToString(pr string) string {
 	default:
 		return "PluralRuleUnknown"
 	}
+}
+
+// parseMonthDayFormat extracts month and day components from a date format pattern
+// and generates Go code for formatting only month and day
+func parseMonthDayFormat(baseLocale, format string) string {
+	if format == "" {
+		return ""
+	}
+
+	// Extract only the month and day patterns from the format
+	// This preserves the locale's ordering and separators
+	filteredFormat := filterDateFormat(format, []string{"M", "d"})
+	return parseDateTimeFormat(baseLocale, filteredFormat, 2)
+}
+
+// parseMonthYearFormat extracts month and year components from a date format pattern
+// and generates Go code for formatting only month and year
+func parseMonthYearFormat(baseLocale, format string) string {
+	if format == "" {
+		return ""
+	}
+
+	// Extract only the month and year patterns from the format
+	// This preserves the locale's ordering and separators
+	filteredFormat := filterDateFormat(format, []string{"M", "y"})
+	return parseDateTimeFormat(baseLocale, filteredFormat, 2)
+}
+
+// filterDateFormat filters a date format pattern to keep only specified components
+// components: array of date component letters to keep (e.g., ["M", "d"] for month and day)
+// This function preserves the order and separators from the original format
+func filterDateFormat(format string, components []string) string {
+	if format == "" {
+		return ""
+	}
+
+	result := ""
+	inQuotes := false
+	i := 0
+
+	for i < len(format) {
+		char := format[i]
+
+		// Handle quoted text (literal text in format)
+		if char == '\'' {
+			if i+1 < len(format) && format[i+1] == '\'' {
+				// Double quote - add literal single quote to result
+				result += "''"
+				i += 2
+				continue
+			} else {
+				// Single quote - toggle quote mode
+				inQuotes = !inQuotes
+				result += string(char)
+				i++
+				continue
+			}
+		}
+
+		// If we're in quotes, copy everything literally
+		if inQuotes {
+			result += string(char)
+			i++
+			continue
+		}
+
+		// Check if this character starts a date component we want to keep
+		kept := false
+		for _, component := range components {
+			if strings.HasPrefix(format[i:], component) {
+				// Count consecutive occurrences of this component letter
+				count := 0
+				j := i
+				for j < len(format) && format[j] == component[0] {
+					count++
+					j++
+				}
+
+				// Add the component pattern (e.g., "MMM" or "d")
+				result += strings.Repeat(component, count)
+				i = j
+				kept = true
+				break
+			}
+		}
+
+		if kept {
+			continue
+		}
+
+		// Check if this is a separator or other non-component character
+		// Keep separators that appear between components we want
+		if char == ' ' || char == ',' || char == '/' || char == '-' || char == '.' {
+			// Look ahead and behind to see if we're between wanted components
+			hasComponentBefore := false
+			hasComponentAfter := false
+
+			// Check before
+			for j := i - 1; j >= 0; j-- {
+				if format[j] == ' ' || format[j] == ',' || format[j] == '/' || format[j] == '-' || format[j] == '.' {
+					continue
+				}
+				for _, component := range components {
+					if format[j] == component[0] {
+						hasComponentBefore = true
+						break
+					}
+				}
+				break
+			}
+
+			// Check after
+			for j := i + 1; j < len(format); j++ {
+				if format[j] == ' ' || format[j] == ',' || format[j] == '/' || format[j] == '-' || format[j] == '.' {
+					continue
+				}
+				for _, component := range components {
+					if format[j] == component[0] {
+						hasComponentAfter = true
+						break
+					}
+				}
+				break
+			}
+
+			// Keep separator if it's between components we want
+			if hasComponentBefore && hasComponentAfter {
+				result += string(char)
+			}
+		}
+
+		i++
+	}
+
+	return result
 }

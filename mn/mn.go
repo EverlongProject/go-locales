@@ -516,6 +516,35 @@ func (mn *mn) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'mn'
+func (mn *mn) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, []byte{0xc3, 0x90, 0xc2, 0xbe, 0xc3, 0x90, 0xc2, 0xbd, 0xc3, 0x91, 0xc2, 0x8b, 0x4d, 0x4d, 0x4d}...)
+	b = append(b, []byte{0xc3, 0x91, 0xc2, 0x8b, 0xc3, 0x90, 0xc2, 0xbd, 0x27, 0x20, 0x64}...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'mn'
+func (mn *mn) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	b = append(b, []byte{0x20, 0xd0, 0xbe, 0xd0, 0xbd, 0xd1, 0x8b}...)
+	b = append(b, mn.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0xc3, 0x91, 0xc2, 0x8b, 0xc3, 0x90, 0xc2, 0xbd}...)
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'mn'
 func (mn *mn) FmtTimeShort(t time.Time) string {
 
