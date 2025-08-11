@@ -488,6 +488,40 @@ func (eo *eo_001) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'eo_001'
+func (eo *eo_001) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, eo.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x2d}...)
+
+	if t.Day() < 10 {
+		b = append(b, '0')
+	}
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'eo_001'
+func (eo *eo_001) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	b = append(b, []byte{0x2d}...)
+	b = append(b, eo.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'eo_001'
 func (eo *eo_001) FmtTimeShort(t time.Time) string {
 

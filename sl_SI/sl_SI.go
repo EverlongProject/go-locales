@@ -75,7 +75,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"pr. Kr.", "po Kr."},
 		erasNarrow:             []string{"", ""},
 		erasWide:               []string{"pred Kristusom", "po Kristusu"},
-		timezones:              map[string]string{"ACDT": "Avstralski centralni poletni čas", "ACST": "Avstralski centralni standardni čas", "ACWDT": "Avstralski centralni zahodni poletni čas", "ACWST": "Avstralski centralni zahodni standardni čas", "ADT": "Atlantski poletni čas", "AEDT": "Avstralski vzhodni poletni čas", "AEST": "Avstralski vzhodni standardni čas", "AKDT": "Aljaški poletni čas", "AKST": "Aljaški standardni čas", "ARST": "Argentinski poletni čas", "ART": "Argentinski standardni čas", "AST": "Atlantski standardni čas", "AWDT": "Avstralski zahodni poletni čas", "AWST": "Avstralski zahodni standardni čas", "BOT": "Bolivijski čas", "BT": "Butanski čas", "CAT": "Centralnoafriški čas", "CDT": "Centralni poletni čas", "CHADT": "Čatamski poletni čas", "CHAST": "Čatamski standardni čas", "CLST": "Čilski poletni čas", "CLT": "Čilski standardni čas", "COST": "Kolumbijski poletni čas", "COT": "Kolumbijski standardni čas", "CST": "Centralni standardni čas", "ChST": "Čamorski standardni čas", "EAT": "Vzhodnoafriški čas", "ECT": "Ekvadorski čas", "EDT": "Vzhodni poletni čas", "EST": "Vzhodni standardni čas", "GFT": "Čas: Francoska Gvajana", "GMT": "Greenwiški srednji čas", "GST": "Zalivski standardni čas", "GYT": "Gvajanski čas", "HADT": "Havajski aleutski poletni čas", "HAST": "Havajski aleutski standardni čas", "HAT": "Novofundlandski poletni čas", "HECU": "Kubanski poletni čas", "HEEG": "Vzhodnogrenlandski poletni čas", "HENOMX": "Mehiški severozahodni poletni čas", "HEOG": "Zahodnogrenlandski poletni čas", "HEPM": "Poletni čas: Saint Pierre in Miquelon", "HEPMX": "Mehiški pacifiški poletni čas", "HKST": "Hongkonški poletni čas", "HKT": "Hongkonški standardni čas", "HNCU": "Kubanski standardni čas", "HNEG": "Vzhodnogrenlandski standardni čas", "HNNOMX": "Mehiški severozahodni standardni čas", "HNOG": "Zahodnogrenlandski standardni čas", "HNPM": "Standardni čas: Saint Pierre in Miquelon", "HNPMX": "Mehiški pacifiški standardni čas", "HNT": "Novofundlandski standardni čas", "IST": "Indijski standardni čas", "JDT": "Japonski poletni čas", "JST": "Japonski standardni čas", "LHDT": "Poletni čas otoka Lord Howe", "LHST": "Standardni čas otoka Lord Howe", "MDT": "Gorski poletni čas", "MESZ": "Srednjeevropski poletni čas", "MEZ": "Srednjeevropski standardni čas", "MST": "Gorski standardni čas", "MYT": "Malezijski čas", "NZDT": "Novozelandski poletni čas", "NZST": "Novozelandski standardni čas", "OESZ": "Vzhodnoevropski poletni čas", "OEZ": "Vzhodnoevropski standardni čas", "PDT": "Pacifiški poletni čas", "PST": "Pacifiški standardni čas", "SAST": "Južnoafriški čas", "SGT": "Singapurski standardni čas", "SRT": "Surinamski čas", "TMST": "Turkmenistanski poletni čas", "TMT": "Turkmenistanski standardni čas", "UYST": "Urugvajski poletni čas", "UYT": "Urugvajski standardni čas", "VET": "Venezuelski čas", "WARST": "Argentinski zahodni poletni čas", "WART": "Argentinski zahodni standardni čas", "WAST": "Zahodnoafriški poletni čas", "WAT": "Zahodnoafriški standardni čas", "WESZ": "Zahodnoevropski poletni čas", "WEZ": "Zahodnoevropski standardni čas", "WIB": "Indonezijski zahodni čas", "WIT": "Indonezijski vzhodni čas", "WITA": "Indonezijski osrednji čas", "∅∅∅": "Perujski poletni čas"},
+		timezones:              map[string]string{"ACDT": "Avstralski centralni poletni čas", "ACST": "Avstralski centralni standardni čas", "ACWDT": "Avstralski centralni zahodni poletni čas", "ACWST": "Avstralski centralni zahodni standardni čas", "ADT": "Atlantski poletni čas", "AEDT": "Avstralski vzhodni poletni čas", "AEST": "Avstralski vzhodni standardni čas", "AKDT": "Aljaški poletni čas", "AKST": "Aljaški standardni čas", "ARST": "Argentinski poletni čas", "ART": "Argentinski standardni čas", "AST": "Atlantski standardni čas", "AWDT": "Avstralski zahodni poletni čas", "AWST": "Avstralski zahodni standardni čas", "BOT": "Bolivijski čas", "BT": "Butanski čas", "CAT": "Centralnoafriški čas", "CDT": "Centralni poletni čas", "CHADT": "Čatamski poletni čas", "CHAST": "Čatamski standardni čas", "CLST": "Čilski poletni čas", "CLT": "Čilski standardni čas", "COST": "Kolumbijski poletni čas", "COT": "Kolumbijski standardni čas", "CST": "Centralni standardni čas", "ChST": "Čamorski standardni čas", "EAT": "Vzhodnoafriški čas", "ECT": "Ekvadorski čas", "EDT": "Vzhodni poletni čas", "EST": "Vzhodni standardni čas", "GFT": "Čas: Francoska Gvajana", "GMT": "Greenwiški srednji čas", "GST": "Zalivski standardni čas", "GYT": "Gvajanski čas", "HADT": "Havajski aleutski poletni čas", "HAST": "Havajski aleutski standardni čas", "HAT": "Novofundlandski poletni čas", "HECU": "Kubanski poletni čas", "HEEG": "Vzhodnogrenlandski poletni čas", "HENOMX": "Mehiški severozahodni poletni čas", "HEOG": "Zahodnogrenlandski poletni čas", "HEPM": "Poletni čas: Saint Pierre in Miquelon", "HEPMX": "Mehiški pacifiški poletni čas", "HKST": "Hongkonški poletni čas", "HKT": "Hongkonški standardni čas", "HNCU": "Kubanski standardni čas", "HNEG": "Vzhodnogrenlandski standardni čas", "HNNOMX": "Mehiški severozahodni standardni čas", "HNOG": "Zahodnogrenlandski standardni čas", "HNPM": "Standardni čas: Saint Pierre in Miquelon", "HNPMX": "Mehiški pacifiški standardni čas", "HNT": "Novofundlandski standardni čas", "IST": "Indijski standardni čas", "JDT": "Japonski poletni čas", "JST": "Japonski standardni čas", "LHDT": "Poletni čas otoka Lord Howe", "LHST": "Standardni čas otoka Lord Howe", "MDT": "MDT", "MESZ": "Srednjeevropski poletni čas", "MEZ": "Srednjeevropski standardni čas", "MST": "MST", "MYT": "Malezijski čas", "NZDT": "Novozelandski poletni čas", "NZST": "Novozelandski standardni čas", "OESZ": "Vzhodnoevropski poletni čas", "OEZ": "Vzhodnoevropski standardni čas", "PDT": "Pacifiški poletni čas", "PST": "Pacifiški standardni čas", "SAST": "Južnoafriški čas", "SGT": "Singapurski standardni čas", "SRT": "Surinamski čas", "TMST": "Turkmenistanski poletni čas", "TMT": "Turkmenistanski standardni čas", "UYST": "Urugvajski poletni čas", "UYT": "Urugvajski standardni čas", "VET": "Venezuelski čas", "WARST": "Argentinski zahodni poletni čas", "WART": "Argentinski zahodni standardni čas", "WAST": "Zahodnoafriški poletni čas", "WAT": "Zahodnoafriški standardni čas", "WESZ": "Zahodnoevropski poletni čas", "WEZ": "Zahodnoevropski standardni čas", "WIB": "Indonezijski zahodni čas", "WIT": "Indonezijski vzhodni čas", "WITA": "Indonezijski osrednji čas", "∅∅∅": "∅∅∅"},
 	}
 }
 
@@ -533,6 +533,35 @@ func (sl *sl_SI) FmtDateFull(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x2e, 0x20}...)
 	b = append(b, sl.monthsWide[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'sl_SI'
+func (sl *sl_SI) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x2e, 0x20}...)
+	b = append(b, sl.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'sl_SI'
+func (sl *sl_SI) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, sl.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {

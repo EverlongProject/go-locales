@@ -442,6 +442,22 @@ func (ku *ku_TR) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'ku_TR'
+func (ku *ku_TR) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'ku_TR'
+func (ku *ku_TR) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'ku_TR'
 func (ku *ku_TR) FmtTimeShort(t time.Time) string {
 

@@ -67,13 +67,13 @@ func New() locales.Translator {
 		daysNarrow:             []string{"S", "M", "T", "O", "T", "F", "L"},
 		daysShort:              []string{"sø.", "ma.", "ti.", "on.", "to.", "fr.", "lø."},
 		daysWide:               []string{"søndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag"},
-		periodsAbbreviated:     []string{"a.m.", "p.m."},
+		periodsAbbreviated:     []string{"am", "pm"},
 		periodsNarrow:          []string{"a", "p"},
-		periodsWide:            []string{"a.m.", "p.m."},
+		periodsWide:            []string{"am", "pm"},
 		erasAbbreviated:        []string{"f.Kr.", "e.Kr."},
 		erasNarrow:             []string{"f.Kr.", "e.Kr."},
 		erasWide:               []string{"før Kristus", "etter Kristus"},
-		timezones:              map[string]string{"ACDT": "sentralaustralsk sommertid", "ACST": "sentralaustralsk normaltid", "ACWDT": "vest-sentralaustralsk sommertid", "ACWST": "vest-sentralaustralsk normaltid", "ADT": "sommertid for den nordamerikanske atlanterhavskysten", "AEDT": "østaustralsk sommertid", "AEST": "østaustralsk normaltid", "AKDT": "alaskisk sommertid", "AKST": "alaskisk normaltid", "ARST": "argentinsk sommertid", "ART": "argentinsk normaltid", "AST": "normaltid for den nordamerikanske atlanterhavskysten", "AWDT": "vestaustralsk sommertid", "AWST": "vestaustralsk normaltid", "BOT": "boliviansk tid", "BT": "bhutansk tid", "CAT": "sentralafrikansk tid", "CDT": "sommertid for det sentrale Nord-Amerika", "CHADT": "sommertid for Chatham", "CHAST": "normaltid for Chatham", "CLST": "chilensk sommertid", "CLT": "chilensk normaltid", "COST": "colombiansk sommertid", "COT": "colombiansk normaltid", "CST": "normaltid for det sentrale Nord-Amerika", "ChST": "tidssone for Chamorro", "EAT": "østafrikansk tid", "ECT": "ecuadoriansk tid", "EDT": "sommertid for den nordamerikanske østkysten", "EST": "normaltid for den nordamerikanske østkysten", "GFT": "tidssone for Fransk Guyana", "GMT": "Greenwich middeltid", "GST": "tidssone for Persiabukta", "GYT": "guyansk tid", "HADT": "sommertid for Hawaii og Aleutene", "HAST": "normaltid for Hawaii og Aleutene", "HAT": "sommertid for Newfoundland", "HECU": "cubansk sommertid", "HEEG": "østgrønlandsk sommertid", "HENOMX": "sommertid for nordvestlige Mexico", "HEOG": "vestgrønlandsk sommertid", "HEPM": "sommertid for Saint-Pierre-et-Miquelon", "HEPMX": "sommertid for den meksikanske Stillehavskysten", "HKST": "sommertid for Hongkong", "HKT": "normaltid for Hongkong", "HNCU": "cubansk normaltid", "HNEG": "østgrønlandsk normaltid", "HNNOMX": "normaltid for nordvestlige Mexico", "HNOG": "vestgrønlandsk normaltid", "HNPM": "normaltid for Saint-Pierre-et-Miquelon", "HNPMX": "normaltid for den meksikanske Stillehavskysten", "HNT": "normaltid for Newfoundland", "IST": "indisk tid", "JDT": "japansk sommertid", "JST": "japansk normaltid", "LHDT": "sommertid for Lord Howe-øya", "LHST": "normaltid for Lord Howe-øya", "MDT": "sommertid for Rocky Mountains (USA)", "MESZ": "sentraleuropeisk sommertid", "MEZ": "sentraleuropeisk normaltid", "MST": "normaltid for Rocky Mountains (USA)", "MYT": "malaysisk tid", "NZDT": "newzealandsk sommertid", "NZST": "newzealandsk normaltid", "OESZ": "østeuropeisk sommertid", "OEZ": "østeuropeisk normaltid", "PDT": "sommertid for den nordamerikanske Stillehavskysten", "PST": "normaltid for den nordamerikanske Stillehavskysten", "SAST": "sørafrikansk tid", "SGT": "singaporsk tid", "SRT": "surinamsk tid", "TMST": "turkmensk sommertid", "TMT": "turkmensk normaltid", "UYST": "uruguayansk sommertid", "UYT": "uruguayansk normaltid", "VET": "venezuelansk tid", "WARST": "vestargentinsk sommertid", "WART": "vestargentinsk normaltid", "WAST": "vestafrikansk sommertid", "WAT": "vestafrikansk normaltid", "WESZ": "vesteuropeisk sommertid", "WEZ": "vesteuropeisk normaltid", "WIB": "vestindonesisk tid", "WIT": "østindonesisk tid", "WITA": "sentralindonesisk tid", "∅∅∅": "peruansk sommertid"},
+		timezones:              map[string]string{"ACDT": "sentralaustralsk sommertid", "ACST": "sentralaustralsk normaltid", "ACWDT": "vest-sentralaustralsk sommertid", "ACWST": "vest-sentralaustralsk normaltid", "ADT": "sommertid for den nordamerikanske atlanterhavskysten", "AEDT": "østaustralsk sommertid", "AEST": "østaustralsk normaltid", "AKDT": "alaskisk sommertid", "AKST": "alaskisk normaltid", "ARST": "argentinsk sommertid", "ART": "argentinsk normaltid", "AST": "normaltid for den nordamerikanske atlanterhavskysten", "AWDT": "vestaustralsk sommertid", "AWST": "vestaustralsk normaltid", "BOT": "boliviansk tid", "BT": "bhutansk tid", "CAT": "sentralafrikansk tid", "CDT": "sommertid for det sentrale Nord-Amerika", "CHADT": "sommertid for Chatham", "CHAST": "normaltid for Chatham", "CLST": "chilensk sommertid", "CLT": "chilensk normaltid", "COST": "colombiansk sommertid", "COT": "colombiansk normaltid", "CST": "normaltid for det sentrale Nord-Amerika", "ChST": "tidssone for Chamorro", "EAT": "østafrikansk tid", "ECT": "ecuadoriansk tid", "EDT": "sommertid for den nordamerikanske østkysten", "EST": "normaltid for den nordamerikanske østkysten", "GFT": "tidssone for Fransk Guyana", "GMT": "Greenwich middeltid", "GST": "tidssone for Persiabukta", "GYT": "guyansk tid", "HADT": "sommertid for Hawaii og Aleutene", "HAST": "normaltid for Hawaii og Aleutene", "HAT": "sommertid for Newfoundland", "HECU": "cubansk sommertid", "HEEG": "østgrønlandsk sommertid", "HENOMX": "sommertid for nordvestlige Mexico", "HEOG": "vestgrønlandsk sommertid", "HEPM": "sommertid for Saint-Pierre-et-Miquelon", "HEPMX": "sommertid for den meksikanske Stillehavskysten", "HKST": "sommertid for Hongkong", "HKT": "normaltid for Hongkong", "HNCU": "cubansk normaltid", "HNEG": "østgrønlandsk normaltid", "HNNOMX": "normaltid for nordvestlige Mexico", "HNOG": "vestgrønlandsk normaltid", "HNPM": "normaltid for Saint-Pierre-et-Miquelon", "HNPMX": "normaltid for den meksikanske Stillehavskysten", "HNT": "normaltid for Newfoundland", "IST": "indisk tid", "JDT": "japansk sommertid", "JST": "japansk normaltid", "LHDT": "sommertid for Lord Howe-øya", "LHST": "normaltid for Lord Howe-øya", "MDT": "sommertid for Rocky Mountains (USA)", "MESZ": "sentraleuropeisk sommertid", "MEZ": "sentraleuropeisk normaltid", "MST": "normaltid for Rocky Mountains (USA)", "MYT": "malaysisk tid", "NZDT": "newzealandsk sommertid", "NZST": "newzealandsk normaltid", "OESZ": "østeuropeisk sommertid", "OEZ": "østeuropeisk normaltid", "PDT": "sommertid for den nordamerikanske Stillehavskysten", "PST": "normaltid for den nordamerikanske Stillehavskysten", "SAST": "sørafrikansk tid", "SGT": "singaporsk tid", "SRT": "surinamsk tid", "TMST": "turkmensk sommertid", "TMT": "turkmensk normaltid", "UYST": "uruguayansk sommertid", "UYT": "uruguayansk normaltid", "VET": "venezuelansk tid", "WARST": "vestargentinsk sommertid", "WART": "vestargentinsk normaltid", "WAST": "vestafrikansk sommertid", "WAT": "vestafrikansk normaltid", "WESZ": "vesteuropeisk sommertid", "WEZ": "vesteuropeisk normaltid", "WIB": "vestindonesisk tid", "WIT": "østindonesisk tid", "WITA": "sentralindonesisk tid", "∅∅∅": "sommertid for Amazonas"},
 	}
 }
 
@@ -504,6 +504,35 @@ func (nb *nb_NO) FmtDateFull(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x2e, 0x20}...)
 	b = append(b, nb.monthsWide[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'nb_NO'
+func (nb *nb_NO) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x2e, 0x20}...)
+	b = append(b, nb.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'nb_NO'
+func (nb *nb_NO) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, nb.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {

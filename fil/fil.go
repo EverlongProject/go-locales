@@ -71,7 +71,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"BC", "AD"},
 		erasNarrow:             []string{"", ""},
 		erasWide:               []string{"Before Christ", "Anno Domini"},
-		timezones:              map[string]string{"ACDT": "Daylight Time sa Gitnang Australya", "ACST": "Standard na Oras sa Gitnang Australya", "ACWDT": "Daylight Time sa Gitnang Kanlurang Australya", "ACWST": "Standard Time ng Gitnang Kanluran ng Australya", "ADT": "Daylight Time sa Atlantiko", "AEDT": "Daylight Time sa Silangang Australya", "AEST": "Standard na Oras sa Silangang Australya", "AKDT": "Daylight Time sa Alaska", "AKST": "Standard na Oras sa Alaska", "ARST": "Oras sa Tag-init ng Argentina", "ART": "Standard na Oras sa Argentina", "AST": "Standard na Oras sa Atlantiko", "AWDT": "Daylight Time sa Kanlurang Australya", "AWST": "Standard na Oras sa Kanlurang Australya", "BOT": "Oras sa Bolivia", "BT": "Oras sa Bhutan", "CAT": "Oras sa Gitnang Africa", "CDT": "Sentral na Daylight Time", "CHADT": "Daylight Time sa Chatham", "CHAST": "Standard na Oras sa Chatham", "CLST": "Oras sa Tag-init ng Chile", "CLT": "Standard na Oras sa Chile", "COST": "Oras sa Tag-init ng Colombia", "COT": "Standard na Oras sa Colombia", "CST": "Sentral na Karaniwang Oras", "ChST": "Standard na Oras sa Chamorro", "EAT": "Oras sa Silangang Africa", "ECT": "Oras sa Ecuador", "EDT": "Eastern Daylight Time", "EST": "Eastern na Standard na Oras", "GFT": "Oras sa French Guiana", "GMT": "Greenwich Mean Time", "GST": "Oras sa Gulf", "GYT": "Oras sa Guyana", "HADT": "Oras sa Tag-init ng Hawaii-Aleutian", "HAST": "Standard na Oras sa Hawaii-Aleutian", "HAT": "Daylight Time sa Newfoundland", "HECU": "Daylight Time sa Cuba", "HEEG": "Oras sa Tag-init ng Silangang Greenland", "HENOMX": "Daylight Time sa Hilagang-kanlurang Mexico", "HEOG": "Oras sa Tag-init ng Kanlurang Greenland", "HEPM": "Daylight Time sa Saint Pierre & Miquelon", "HEPMX": "Daylight Time sa Pasipiko ng Mexico", "HKST": "Oras sa Tag-init ng Hong Kong", "HKT": "Standard na Oras sa Hong Kong", "HNCU": "Standard na Oras sa Cuba", "HNEG": "Standard na Oras sa Silangang Greenland", "HNNOMX": "Standard na Oras sa Hilagang-kanlurang Mexico", "HNOG": "Standard na Oras sa Kanlurang Greenland", "HNPM": "Standard na Oras sa Saint Pierre & Miquelon", "HNPMX": "Standard na Oras sa Pasipiko ng Mexico", "HNT": "Standard na Oras sa Newfoundland", "IST": "Standard na Oras sa Bhutan", "JDT": "Daylight Time sa Japan", "JST": "Standard na Oras sa Japan", "LHDT": "Daylight Time sa Lorde Howe", "LHST": "Standard na Oras sa Lord Howe", "MDT": "Daylight Time sa Bundok", "MESZ": "Oras sa Tag-init ng Gitnang Europe", "MEZ": "Standard na Oras sa Gitnang Europe", "MST": "Standard na Oras sa Bundok", "MYT": "Oras sa Malaysia", "NZDT": "Daylight Time sa New Zealand", "NZST": "Standard na Oras sa New Zealand", "OESZ": "Oras sa Tag-init ng Silangang Europe", "OEZ": "Standard na Oras sa Silangang Europe", "PDT": "Daylight Time sa Pasipiko", "PST": "Standard na Oras sa Pasipiko", "SAST": "Oras sa Timog Africa", "SGT": "Standard na Oras sa Singapore", "SRT": "Oras sa Suriname", "TMST": "Oras sa Tag-init ng Turkmenistan", "TMT": "Standard na Oras sa Turkmenistan", "UYST": "Oras sa Tag-init ng Uruguay", "UYT": "Standard na Oras sa Uruguay", "VET": "Oras sa Venezuela", "WARST": "Oras sa Tag-init ng Kanlurang Argentina", "WART": "Standard na Oras sa Kanlurang Argentina", "WAST": "Oras sa Tag-init ng Kanlurang Africa", "WAT": "Standard na Oras sa Kanlurang Africa", "WESZ": "Oras sa Tag-init ng Kanlurang Europe", "WEZ": "Standard na Oras sa Kanlurang Europe", "WIB": "Oras sa Kanlurang Indonesia", "WIT": "Oras sa Silangang Indonesia", "WITA": "Oras sa Gitnang Indonesia", "∅∅∅": "Oras sa Tag-init ng Azores"},
+		timezones:              map[string]string{"ACDT": "Daylight Time sa Gitnang Australya", "ACST": "Standard na Oras sa Gitnang Australya", "ACWDT": "Daylight Time sa Gitnang Kanlurang Australya", "ACWST": "Standard Time ng Gitnang Kanluran ng Australya", "ADT": "Daylight Time sa Atlantiko", "AEDT": "Daylight Time sa Silangang Australya", "AEST": "Standard na Oras sa Silangang Australya", "AKDT": "Daylight Time sa Alaska", "AKST": "Standard na Oras sa Alaska", "ARST": "Oras sa Tag-init ng Argentina", "ART": "Standard na Oras sa Argentina", "AST": "Standard na Oras sa Atlantiko", "AWDT": "Daylight Time sa Kanlurang Australya", "AWST": "Standard na Oras sa Kanlurang Australya", "BOT": "Oras sa Bolivia", "BT": "Oras sa Bhutan", "CAT": "Oras sa Gitnang Africa", "CDT": "Sentral na Daylight Time", "CHADT": "Daylight Time sa Chatham", "CHAST": "Standard na Oras sa Chatham", "CLST": "Oras sa Tag-init ng Chile", "CLT": "Standard na Oras sa Chile", "COST": "Oras sa Tag-init ng Colombia", "COT": "Standard na Oras sa Colombia", "CST": "Sentral na Karaniwang Oras", "ChST": "Standard na Oras sa Chamorro", "EAT": "Oras sa Silangang Africa", "ECT": "Oras sa Ecuador", "EDT": "Eastern Daylight Time", "EST": "Eastern na Standard na Oras", "GFT": "Oras sa French Guiana", "GMT": "Greenwich Mean Time", "GST": "Oras sa Gulf", "GYT": "Oras sa Guyana", "HADT": "Oras sa Tag-init ng Hawaii-Aleutian", "HAST": "Standard na Oras sa Hawaii-Aleutian", "HAT": "Daylight Time sa Newfoundland", "HECU": "Daylight Time sa Cuba", "HEEG": "Oras sa Tag-init ng Silangang Greenland", "HENOMX": "Daylight Time sa Hilagang-kanlurang Mexico", "HEOG": "Oras sa Tag-init ng Kanlurang Greenland", "HEPM": "Daylight Time sa Saint Pierre & Miquelon", "HEPMX": "Daylight Time sa Pasipiko ng Mexico", "HKST": "Oras sa Tag-init ng Hong Kong", "HKT": "Standard na Oras sa Hong Kong", "HNCU": "Standard na Oras sa Cuba", "HNEG": "Standard na Oras sa Silangang Greenland", "HNNOMX": "Standard na Oras sa Hilagang-kanlurang Mexico", "HNOG": "Standard na Oras sa Kanlurang Greenland", "HNPM": "Standard na Oras sa Saint Pierre & Miquelon", "HNPMX": "Standard na Oras sa Pasipiko ng Mexico", "HNT": "Standard na Oras sa Newfoundland", "IST": "Standard na Oras sa Bhutan", "JDT": "Daylight Time sa Japan", "JST": "Standard na Oras sa Japan", "LHDT": "Daylight Time sa Lorde Howe", "LHST": "Standard na Oras sa Lord Howe", "MDT": "MDT", "MESZ": "Oras sa Tag-init ng Gitnang Europe", "MEZ": "Standard na Oras sa Gitnang Europe", "MST": "MST", "MYT": "Oras sa Malaysia", "NZDT": "Daylight Time sa New Zealand", "NZST": "Standard na Oras sa New Zealand", "OESZ": "Oras sa Tag-init ng Silangang Europe", "OEZ": "Standard na Oras sa Silangang Europe", "PDT": "Daylight Time sa Pasipiko", "PST": "Standard na Oras sa Pasipiko", "SAST": "Oras sa Timog Africa", "SGT": "Standard na Oras sa Singapore", "SRT": "Oras sa Suriname", "TMST": "Oras sa Tag-init ng Turkmenistan", "TMT": "Standard na Oras sa Turkmenistan", "UYST": "Oras sa Tag-init ng Uruguay", "UYT": "Standard na Oras sa Uruguay", "VET": "Oras sa Venezuela", "WARST": "Oras sa Tag-init ng Kanlurang Argentina", "WART": "Standard na Oras sa Kanlurang Argentina", "WAST": "Oras sa Tag-init ng Kanlurang Africa", "WAT": "Standard na Oras sa Kanlurang Africa", "WESZ": "Oras sa Tag-init ng Kanlurang Europe", "WEZ": "Standard na Oras sa Kanlurang Europe", "WIB": "Oras sa Kanlurang Indonesia", "WIT": "Oras sa Silangang Indonesia", "WITA": "Oras sa Gitnang Indonesia", "∅∅∅": "Oras sa Tag-init ng Azores"},
 	}
 }
 
@@ -503,6 +503,34 @@ func (fil *fil) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'fil'
+func (fil *fil) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, fil.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'fil'
+func (fil *fil) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, fil.monthsAbbreviated[t.Month()]...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'fil'
 func (fil *fil) FmtTimeShort(t time.Time) string {
 
@@ -512,6 +540,8 @@ func (fil *fil) FmtTimeShort(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -542,6 +572,8 @@ func (fil *fil) FmtTimeMedium(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -579,6 +611,8 @@ func (fil *fil) FmtTimeLong(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -621,6 +655,8 @@ func (fil *fil) FmtTimeFull(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)

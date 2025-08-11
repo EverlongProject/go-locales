@@ -69,7 +69,7 @@ func New() locales.Translator {
 		erasAbbreviated:    []string{"б.э.к.", "милади"},
 		erasNarrow:         []string{"", ""},
 		erasWide:           []string{"безнең эрага кадәр", "безнең эра"},
-		timezones:          map[string]string{"ACDT": "ACDT", "ACST": "ACST", "ACWDT": "ACWDT", "ACWST": "ACWST", "ADT": "Төньяк Америка җәйге атлантик вакыты", "AEDT": "AEDT", "AEST": "AEST", "AKDT": "AKDT", "AKST": "AKST", "ARST": "ARST", "ART": "ART", "AST": "Төньяк Америка гадәти атлантик вакыты", "AWDT": "AWDT", "AWST": "AWST", "BOT": "BOT", "BT": "BT", "CAT": "CAT", "CDT": "Төньяк Америка җәйге үзәк вакыты", "CHADT": "CHADT", "CHAST": "CHAST", "CLST": "CLST", "CLT": "CLT", "COST": "COST", "COT": "COT", "CST": "Төньяк Америка гадәти үзәк вакыты", "ChST": "ChST", "EAT": "EAT", "ECT": "ECT", "EDT": "Төньяк Америка җәйге көнчыгыш вакыты", "EST": "Төньяк Америка гадәти көнчыгыш вакыты", "GFT": "GFT", "GMT": "Гринвич уртача вакыты", "GST": "GST", "GYT": "GYT", "HADT": "HADT", "HAST": "HAST", "HAT": "HAT", "HECU": "HECU", "HEEG": "HEEG", "HENOMX": "HENOMX", "HEOG": "HEOG", "HEPM": "HEPM", "HEPMX": "HEPMX", "HKST": "HKST", "HKT": "HKT", "HNCU": "HNCU", "HNEG": "HNEG", "HNNOMX": "HNNOMX", "HNOG": "HNOG", "HNPM": "HNPM", "HNPMX": "HNPMX", "HNT": "HNT", "IST": "IST", "JDT": "JDT", "JST": "JST", "LHDT": "LHDT", "LHST": "LHST", "MDT": "Төньяк Америка җәйге тау вакыты", "MESZ": "җәйге Үзәк Европа вакыты", "MEZ": "гадәти Үзәк Европа вакыты", "MST": "Төньяк Америка гадәти тау вакыты", "MYT": "MYT", "NZDT": "NZDT", "NZST": "NZST", "OESZ": "җәйге Көнчыгыш Европа вакыты", "OEZ": "гадәти Көнчыгыш Европа вакыты", "PDT": "Төньяк Америка җәйге Тын океан вакыты", "PST": "Төньяк Америка гадәти Тын океан вакыты", "SAST": "SAST", "SGT": "SGT", "SRT": "SRT", "TMST": "TMST", "TMT": "TMT", "UYST": "UYST", "UYT": "UYT", "VET": "VET", "WARST": "WARST", "WART": "WART", "WAST": "WAST", "WAT": "WAT", "WESZ": "җәйге Көнбатыш Европа вакыты", "WEZ": "гадәти Көнбатыш Европа вакыты", "WIB": "WIB", "WIT": "WIT", "WITA": "WITA", "∅∅∅": "∅∅∅"},
+		timezones:          map[string]string{"ACDT": "ACDT", "ACST": "ACST", "ACWDT": "ACWDT", "ACWST": "ACWST", "ADT": "Төньяк Америка җәйге атлантик вакыты", "AEDT": "AEDT", "AEST": "AEST", "AKDT": "AKDT", "AKST": "AKST", "ARST": "ARST", "ART": "ART", "AST": "Төньяк Америка гадәти атлантик вакыты", "AWDT": "AWDT", "AWST": "AWST", "BOT": "BOT", "BT": "BT", "CAT": "CAT", "CDT": "Төньяк Америка җәйге үзәк вакыты", "CHADT": "CHADT", "CHAST": "CHAST", "CLST": "CLST", "CLT": "CLT", "COST": "COST", "COT": "COT", "CST": "Төньяк Америка гадәти үзәк вакыты", "ChST": "ChST", "EAT": "EAT", "ECT": "ECT", "EDT": "Төньяк Америка җәйге көнчыгыш вакыты", "EST": "Төньяк Америка гадәти көнчыгыш вакыты", "GFT": "GFT", "GMT": "Гринвич уртача вакыты", "GST": "GST", "GYT": "GYT", "HADT": "HADT", "HAST": "HAST", "HAT": "HAT", "HECU": "HECU", "HEEG": "HEEG", "HENOMX": "HENOMX", "HEOG": "HEOG", "HEPM": "HEPM", "HEPMX": "HEPMX", "HKST": "HKST", "HKT": "HKT", "HNCU": "HNCU", "HNEG": "HNEG", "HNNOMX": "HNNOMX", "HNOG": "HNOG", "HNPM": "HNPM", "HNPMX": "HNPMX", "HNT": "HNT", "IST": "IST", "JDT": "JDT", "JST": "JST", "LHDT": "LHDT", "LHST": "LHST", "MDT": "MDT", "MESZ": "җәйге Үзәк Европа вакыты", "MEZ": "гадәти Үзәк Европа вакыты", "MST": "MST", "MYT": "MYT", "NZDT": "NZDT", "NZST": "NZST", "OESZ": "җәйге Көнчыгыш Европа вакыты", "OEZ": "гадәти Көнчыгыш Европа вакыты", "PDT": "Төньяк Америка җәйге Тын океан вакыты", "PST": "Төньяк Америка гадәти Тын океан вакыты", "SAST": "SAST", "SGT": "SGT", "SRT": "SRT", "TMST": "TMST", "TMT": "TMT", "UYST": "UYST", "UYT": "UYT", "VET": "VET", "WARST": "WARST", "WART": "WART", "WAST": "WAST", "WAT": "WAT", "WESZ": "җәйге Көнбатыш Европа вакыты", "WEZ": "гадәти Көнбатыш Европа вакыты", "WIB": "WIB", "WIT": "WIT", "WITA": "WITA", "∅∅∅": "∅∅∅"},
 	}
 }
 
@@ -481,6 +481,38 @@ func (tt *tt_RU) FmtDateFull(t time.Time) string {
 	b = append(b, []byte{0x20, 0xd0, 0xb5, 0xd0, 0xbb}...)
 	b = append(b, []byte{0x2c, 0x20}...)
 	b = append(b, tt.daysWide[t.Weekday()]...)
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'tt_RU'
+func (tt *tt_RU) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x20}...)
+	b = append(b, tt.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0xc3, 0x90, 0xc2, 0xb5, 0xc3, 0x90, 0xc2, 0xbb}...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'tt_RU'
+func (tt *tt_RU) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, tt.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x2c, 0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	b = append(b, []byte{0xc3, 0x90, 0xc2, 0xb5, 0xc3, 0x90, 0xc2, 0xbb}...)
 
 	return string(b)
 }

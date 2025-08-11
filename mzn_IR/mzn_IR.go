@@ -238,6 +238,22 @@ func (mzn *mzn_IR) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'mzn_IR'
+func (mzn *mzn_IR) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'mzn_IR'
+func (mzn *mzn_IR) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'mzn_IR'
 func (mzn *mzn_IR) FmtTimeShort(t time.Time) string {
 

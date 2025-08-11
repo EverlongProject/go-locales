@@ -67,9 +67,9 @@ func New() locales.Translator {
 		daysNarrow:             []string{"Z", "M", "D", "W", "D", "V", "Z"},
 		daysShort:              []string{"zo", "ma", "di", "wo", "do", "vr", "za"},
 		daysWide:               []string{"zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"},
-		periodsAbbreviated:     []string{"a.m.", "p.m."},
-		periodsNarrow:          []string{"a.m.", "p.m."},
-		periodsWide:            []string{"a.m.", "p.m."},
+		periodsAbbreviated:     []string{"am", "pm"},
+		periodsNarrow:          []string{"am", "pm"},
+		periodsWide:            []string{"am", "pm"},
 		erasAbbreviated:        []string{"v.Chr.", "n.Chr."},
 		erasNarrow:             []string{"v.C.", "n.C."},
 		erasWide:               []string{"voor Christus", "na Christus"},
@@ -489,6 +489,35 @@ func (nl *nl_AW) FmtDateFull(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x20}...)
 	b = append(b, nl.monthsWide[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'nl_AW'
+func (nl *nl_AW) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x20}...)
+	b = append(b, nl.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'nl_AW'
+func (nl *nl_AW) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, nl.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {

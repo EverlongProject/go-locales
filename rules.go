@@ -141,6 +141,12 @@ type Translator interface {
 	// returns the full date representation of 't' for locale
 	FmtDateFull(t time.Time) string
 
+	// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'en_CA' e.g Jan 1
+	FmtMonthDayMedium(t time.Time) string
+
+	// FmtMonthYearMedium returns the medium date month and day representation of 't' for 'en_CA' e.g Jan 2025
+	FmtMonthYearMedium(t time.Time) string
+
 	// returns the short time representation of 't' for locale
 	FmtTimeShort(t time.Time) string
 

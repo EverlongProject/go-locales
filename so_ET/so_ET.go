@@ -65,7 +65,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"CH", "CD"},
 		erasNarrow:             []string{"", ""},
 		erasWide:               []string{"Ciise Hortii", "Ciise Dabadii"},
-		timezones:              map[string]string{"ACDT": "Waqtiga Dharaarta ee Bartamaha Astaraaliya", "ACST": "Waqtiga Caadiga Ah ee Bartamaha Astaraaliya", "ACWDT": "Waqtiga Dharaarta Bartamaha Galbeedka Australiya", "ACWST": "Waqtiga Caadiga Ah ee Bartamaha Galbeedka Astaraaliya", "ADT": "Waqtiga Dharaarta ee Atlantika Waqooyiga Ameerika", "AEDT": "Waqtiga Dharaarta ee Bariga Astaraaliya", "AEST": "Waqtiyada Caadiga ah ee Bariga Astaraaliya", "AKDT": "Waqtiga Dharaarta ee Alaska", "AKST": "Waqtiga Caadiga Ah ee Alaska", "ARST": "Waqtiga Xagaaga ee Arjentiina", "ART": "Waqtiga Caadiga Ah ee Arjentiina", "AST": "Waqtiga Caadiga Ah ee Atlantika Waqooyiga Ameerika", "AWDT": "Waqtiga Dharaarta ee Galbeedka Astaraaliya", "AWST": "Waqtiga Caadiga Ah ee Galbeedka Astaraaliya", "BOT": "Waqtiga Boliifiya", "BT": "Waqtiga Butaan", "CAT": "Waqtiga Bartamaha Afrika", "CDT": "Waqtiga Dharaarta ee Bartamaha Waqooyiga Ameerika", "CHADT": "Waqtiga Dharaarta ee Jaatam", "CHAST": "Waqtiga Caadiga Ah ee Jaatam", "CLST": "Waqtiga Xagaaga ee Jili", "CLT": "Waqtiga Caadiga Ah ee Jili", "COST": "Waqtiga Xagaaga ee Kolambiya", "COT": "Waqtiga Caadiga Ah ee Kolambiya", "CST": "Waqtiga Caadiga Ah ee Bartamaha Waqooyiga Ameerika", "ChST": "Waqtiga Jamoro", "EAT": "Waqtiga Bariga Afrika", "ECT": "Waqtiga Ekuwadoor", "EDT": "Waqtiga Dharaarta ee Bariga Waqooyiga Ameerika", "EST": "Waqtiga Caadiga Ah ee Bariga Waqooyiga Ameerika", "GFT": "Waqtiga Ferenj Guyana", "GMT": "Waqtiga Celceliska Giriinwij", "GST": "Waqtiga Gacanka", "GYT": "Waqtiga Guyaana", "HADT": "Waqtiga Dharaarta ee Hawaay-Alutiyaan", "HAST": "Waqtiga Caadiga Ah ee Hawaay-Alutiyaan", "HAT": "Waqtiga Dharaarta ee Niyuufoonlaan", "HECU": "Waqtiga Dharaarta ee Kuuba", "HEEG": "Waqtiga Xagaaga ee Bariga Giriinlaan", "HENOMX": "Waqtiga Dharaarta ee Waqooyi-Galbeed Meksiko", "HEOG": "Waqtiga Xagaaga ee Galbeedka Giriinlaan", "HEPM": "Waqtiga Dharaarta ee St. Beere & Mikiwelon", "HEPMX": "Waqtiga Dharaarta ee Baasifikada Meksiko", "HKST": "Waqtiga Xagaaga ee Hoong Koong", "HKT": "Waqtiga Caadiga Ah ee Hoong Koong", "HNCU": "Waqtiga Caadiga Ah ee Kuuba", "HNEG": "Waqtiga Caadiga ah ee Bariga Giriinlaan", "HNNOMX": "Waqtiga Caadiga Ah ee Waqooyi-Galbeed Meksiko", "HNOG": "Waqtiga Caadiga Ah ee Galbeedka Giriinlaan", "HNPM": "Waqtiga Caadiga Ah St. Beere & Mikiwelon", "HNPMX": "Waqtiga Caadiga Ah ee Baasifikada Meksiko", "HNT": "Waqtiga Caadiga Ah ee Niyuufoonlaan", "IST": "Waqtiga Caadiga Ah ee Hindiya", "JDT": "Waqtiga Dharaarta ee Jabaan", "JST": "Waqtiga Caadiga Ah ee Jabaan", "LHDT": "Waqtiga Dharaarta ee Lod How", "LHST": "Waqtiga Caadiga Ah ee Lod How", "MDT": "Waqtiga Dharaarta ee Buurleyda Waqooyiga Ameerika", "MESZ": "Waqtiga Xagaaga ee Bartamaha Yurub", "MEZ": "Waqtiga Caadiga Ah ee Bartamaha Yurub", "MST": "Waqtiga Caadiga ah ee Buuraleyda Waqooyiga Ameerika", "MYT": "Waqtiga Maleyshiya", "NZDT": "Waqtiga Dharaarta ee Niyuu Si’laan", "NZST": "Waqtiga Caadiga Ah ee Niyuu Si’laan", "OESZ": "Waqtiga Xagaaga ee Bariga Yurub", "OEZ": "Waqtiga Caadiga Ah ee Bariga Yurub", "PDT": "Waqtiga Dharaarta ee Basifika Waqooyiga Ameerika", "PST": "Waqtiga Caadiga ah ee Basifika Waqooyiga Ameerika", "SAST": "Waqtiyada Caadiga Ah ee Koonfur Afrika", "SGT": "Waqtiga Singabuur", "SRT": "Waqtiga Surineym", "TMST": "Waqtiga Xagaaga ee Turkmenistan", "TMT": "Waqtiga Caadiga Ah ee Turkmenistan", "UYST": "Waqtiga Xagaaga ee Urugwaay", "UYT": "Waqtiga Caadiga Ah ee Urugwaay", "VET": "Waqtiga Fenezuweela", "WARST": "Waqtiga Xagaaga ee Galbeedka Arjentiina", "WART": "Waqtiga Caadiga Ah ee Galbeedka Arjentiina", "WAST": "Waqtiga Xagaaga ee Galbeedka Afrika", "WAT": "Waqtiga Caadiga Ah ee Galbeedka Afrika", "WESZ": "Waqtiga Xagaaga ee Galbeedka Yurub", "WEZ": "Waqtiga Caadiga Ah ee Galbeedka Yurub", "WIB": "Waqtiga Galbeedka Indoneeysiya", "WIT": "Waqtiga Indoneeysiya", "WITA": "Waqtiga Bartamaha Indoneeysiya", "∅∅∅": "Waqtiga Xagaaga ee Baraasiliya"},
+		timezones:              map[string]string{"ACDT": "Waqtiga Dharaarta ee Bartamaha Astaraaliya", "ACST": "Waqtiga Caadiga Ah ee Bartamaha Astaraaliya", "ACWDT": "Waqtiga Dharaarta Bartamaha Galbeedka Australiya", "ACWST": "Waqtiga Caadiga Ah ee Bartamaha Galbeedka Astaraaliya", "ADT": "Waqtiga Dharaarta ee Atlantika Waqooyiga Ameerika", "AEDT": "Waqtiga Dharaarta ee Bariga Astaraaliya", "AEST": "Waqtiyada Caadiga ah ee Bariga Astaraaliya", "AKDT": "Waqtiga Dharaarta ee Alaska", "AKST": "Waqtiga Caadiga Ah ee Alaska", "ARST": "Waqtiga Xagaaga ee Arjentiina", "ART": "Waqtiga Caadiga Ah ee Arjentiina", "AST": "Waqtiga Caadiga Ah ee Atlantika Waqooyiga Ameerika", "AWDT": "Waqtiga Dharaarta ee Galbeedka Astaraaliya", "AWST": "Waqtiga Caadiga Ah ee Galbeedka Astaraaliya", "BOT": "Waqtiga Boliifiya", "BT": "Waqtiga Butaan", "CAT": "Waqtiga Bartamaha Afrika", "CDT": "Waqtiga Dharaarta ee Bartamaha Waqooyiga Ameerika", "CHADT": "Waqtiga Dharaarta ee Jaatam", "CHAST": "Waqtiga Caadiga Ah ee Jaatam", "CLST": "Waqtiga Xagaaga ee Jili", "CLT": "Waqtiga Caadiga Ah ee Jili", "COST": "Waqtiga Xagaaga ee Kolambiya", "COT": "Waqtiga Caadiga Ah ee Kolambiya", "CST": "Waqtiga Caadiga Ah ee Bartamaha Waqooyiga Ameerika", "ChST": "Waqtiga Jamoro", "EAT": "Waqtiga Bariga Afrika", "ECT": "Waqtiga Ekuwadoor", "EDT": "Waqtiga Dharaarta ee Bariga Waqooyiga Ameerika", "EST": "Waqtiga Caadiga Ah ee Bariga Waqooyiga Ameerika", "GFT": "Waqtiga Ferenj Guyana", "GMT": "Waqtiga Celceliska Giriinwij", "GST": "Waqtiga Gacanka", "GYT": "Waqtiga Guyaana", "HADT": "Waqtiga Dharaarta ee Hawaay-Alutiyaan", "HAST": "Waqtiga Caadiga Ah ee Hawaay-Alutiyaan", "HAT": "Waqtiga Dharaarta ee Niyuufoonlaan", "HECU": "Waqtiga Dharaarta ee Kuuba", "HEEG": "Waqtiga Xagaaga ee Bariga Giriinlaan", "HENOMX": "Waqtiga Dharaarta ee Waqooyi-Galbeed Meksiko", "HEOG": "Waqtiga Xagaaga ee Galbeedka Giriinlaan", "HEPM": "Waqtiga Dharaarta ee St. Beere & Mikiwelon", "HEPMX": "Waqtiga Dharaarta ee Baasifikada Meksiko", "HKST": "Waqtiga Xagaaga ee Hoong Koong", "HKT": "Waqtiga Caadiga Ah ee Hoong Koong", "HNCU": "Waqtiga Caadiga Ah ee Kuuba", "HNEG": "Waqtiga Caadiga ah ee Bariga Giriinlaan", "HNNOMX": "Waqtiga Caadiga Ah ee Waqooyi-Galbeed Meksiko", "HNOG": "Waqtiga Caadiga Ah ee Galbeedka Giriinlaan", "HNPM": "Waqtiga Caadiga Ah St. Beere & Mikiwelon", "HNPMX": "Waqtiga Caadiga Ah ee Baasifikada Meksiko", "HNT": "Waqtiga Caadiga Ah ee Niyuufoonlaan", "IST": "Waqtiga Caadiga Ah ee Hindiya", "JDT": "Waqtiga Dharaarta ee Jabaan", "JST": "Waqtiga Caadiga Ah ee Jabaan", "LHDT": "Waqtiga Dharaarta ee Lod How", "LHST": "Waqtiga Caadiga Ah ee Lod How", "MDT": "MDT", "MESZ": "Waqtiga Xagaaga ee Bartamaha Yurub", "MEZ": "Waqtiga Caadiga Ah ee Bartamaha Yurub", "MST": "MST", "MYT": "Waqtiga Maleyshiya", "NZDT": "Waqtiga Dharaarta ee Niyuu Si’laan", "NZST": "Waqtiga Caadiga Ah ee Niyuu Si’laan", "OESZ": "Waqtiga Xagaaga ee Bariga Yurub", "OEZ": "Waqtiga Caadiga Ah ee Bariga Yurub", "PDT": "Waqtiga Dharaarta ee Basifika Waqooyiga Ameerika", "PST": "Waqtiga Caadiga ah ee Basifika Waqooyiga Ameerika", "SAST": "Waqtiyada Caadiga Ah ee Koonfur Afrika", "SGT": "Waqtiga Singabuur", "SRT": "Waqtiga Surineym", "TMST": "Waqtiga Xagaaga ee Turkmenistan", "TMT": "Waqtiga Caadiga Ah ee Turkmenistan", "UYST": "Waqtiga Xagaaga ee Urugwaay", "UYT": "Waqtiga Caadiga Ah ee Urugwaay", "VET": "Waqtiga Fenezuweela", "WARST": "Waqtiga Xagaaga ee Galbeedka Arjentiina", "WART": "Waqtiga Caadiga Ah ee Galbeedka Arjentiina", "WAST": "Waqtiga Xagaaga ee Galbeedka Afrika", "WAT": "Waqtiga Caadiga Ah ee Galbeedka Afrika", "WESZ": "Waqtiga Xagaaga ee Galbeedka Yurub", "WEZ": "Waqtiga Caadiga Ah ee Galbeedka Yurub", "WIB": "Waqtiga Galbeedka Indoneeysiya", "WIT": "Waqtiga Indoneeysiya", "WITA": "Waqtiga Bartamaha Indoneeysiya", "∅∅∅": "Waqtiga Xagaaga ee Asores"},
 	}
 }
 
@@ -436,6 +436,39 @@ func (so *so_ET) FmtDateFull(t time.Time) string {
 	return string(b)
 }
 
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'so_ET'
+func (so *so_ET) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	if t.Day() < 10 {
+		b = append(b, '0')
+	}
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x2d}...)
+	b = append(b, so.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'so_ET'
+func (so *so_ET) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, so.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x2d}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
 // FmtTimeShort returns the short time representation of 't' for 'so_ET'
 func (so *so_ET) FmtTimeShort(t time.Time) string {
 
@@ -445,6 +478,8 @@ func (so *so_ET) FmtTimeShort(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -475,6 +510,8 @@ func (so *so_ET) FmtTimeMedium(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -512,6 +549,8 @@ func (so *so_ET) FmtTimeLong(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)
@@ -554,6 +593,8 @@ func (so *so_ET) FmtTimeFull(t time.Time) string {
 
 	if h > 12 {
 		h -= 12
+	} else if h == 0 {
+		h = 12
 	}
 
 	b = strconv.AppendInt(b, int64(h), 10)

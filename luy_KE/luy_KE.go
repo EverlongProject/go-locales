@@ -54,8 +54,8 @@ func New() locales.Translator {
 		daysAbbreviated:    []string{"J2", "J3", "J4", "J5", "Al", "Ij", "J1"},
 		daysNarrow:         []string{"S", "M", "T", "W", "T", "F", "S"},
 		daysWide:           []string{"Jumapiri", "Jumatatu", "Jumanne", "Jumatano", "Murwa wa Kanne", "Murwa wa Katano", "Jumamosi"},
-		periodsAbbreviated: []string{"a.m.", "p.m."},
-		periodsWide:        []string{"a.m.", "p.m."},
+		periodsAbbreviated: []string{"am", "pm"},
+		periodsWide:        []string{"am", "pm"},
 		erasAbbreviated:    []string{"BC", "AD"},
 		erasNarrow:         []string{"", ""},
 		erasWide:           []string{"Imberi ya Kuuza Kwa", "Muhiga Kuvita Kuuza"},
@@ -395,6 +395,35 @@ func (luy *luy_KE) FmtDateFull(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x20}...)
 	b = append(b, luy.monthsWide[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'luy_KE'
+func (luy *luy_KE) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x20}...)
+	b = append(b, luy.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'luy_KE'
+func (luy *luy_KE) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, luy.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {

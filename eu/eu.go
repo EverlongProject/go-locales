@@ -75,7 +75,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"K.a.", "K.o."},
 		erasNarrow:             []string{"", ""},
 		erasWide:               []string{"K.a.", "Kristo ondoren"},
-		timezones:              map[string]string{"ACDT": "Australiako erdialdeko udako ordua", "ACST": "Australiako erdialdeko ordu estandarra", "ACWDT": "Australiako erdi-mendebaldeko udako ordua", "ACWST": "Australiako erdi-mendebaldeko ordu estandarra", "ADT": "Ipar Amerikako Atlantikoko udako ordua", "AEDT": "Australiako ekialdeko udako ordua", "AEST": "Australiako ekialdeko ordu estandarra", "AKDT": "Alaskako udako ordua", "AKST": "Alaskako ordu estandarra", "ARST": "Argentinako udako ordua", "ART": "Argentinako ordu estandarra", "AST": "Ipar Amerikako Atlantikoko ordu estandarra", "AWDT": "Australiako mendebaldeko udako ordua", "AWST": "Australiako mendebaldeko ordu estandarra", "BOT": "Boliviako ordua", "BT": "Bhutango ordua", "CAT": "Afrikako erdialdeko ordua", "CDT": "Ipar Amerikako erdialdeko udako ordua", "CHADT": "Chathamgo udako ordua", "CHAST": "Chathamgo ordu estandarra", "CLST": "Txileko udako ordua", "CLT": "Txileko ordu estandarra", "COST": "Kolonbiako udako ordua", "COT": "Kolonbiako ordu estandarra", "CST": "Ipar Amerikako erdialdeko ordu estandarra", "ChST": "Chamorroko ordu estandarra", "EAT": "Afrikako ekialdeko ordua", "ECT": "Ekuadorreko ordua", "EDT": "Ipar Amerikako ekialdeko udako ordua", "EST": "Ipar Amerikako ekialdeko ordu estandarra", "GFT": "Guyana Frantseseko ordua", "GMT": "Greenwichko meridianoaren ordua", "GST": "Golkoko ordu estandarra", "GYT": "Guyanako ordua", "HADT": "Hawaii-Aleutiar uharteetako udako ordua", "HAST": "Hawaii-Aleutiar uharteetako ordu estandarra", "HAT": "Ternuako udako ordua", "HECU": "Kubako udako ordua", "HEEG": "Groenlandiako ekialdeko udako ordua", "HENOMX": "Mexikoko ipar-ekialdeko udako ordua", "HEOG": "Groenlandiako mendebaldeko udako ordua", "HEPM": "Saint-Pierre eta Mikeluneko udako ordua", "HEPMX": "Mexikoko Pazifikoko udako ordua", "HKST": "Hong Kongo udako ordua", "HKT": "Hong Kongo ordu estandarra", "HNCU": "Kubako ordu estandarra", "HNEG": "Groenlandiako ekialdeko ordu estandarra", "HNNOMX": "Mexikoko ipar-ekialdeko ordu estandarra", "HNOG": "Groenlandiako mendebaldeko ordu estandarra", "HNPM": "Saint-Pierre eta Mikeluneko ordu estandarra", "HNPMX": "Mexikoko Pazifikoko ordu estandarra", "HNT": "Ternuako ordu estandarra", "IST": "Indiako ordua", "JDT": "Japoniako udako ordua", "JST": "Japoniako ordu estandarra", "LHDT": "Lord Howeko udako ordua", "LHST": "Lord Howeko ordu estandarra", "MDT": "Ipar Amerikako mendialdeko udako ordua", "MESZ": "Europako erdialdeko udako ordua", "MEZ": "Europako erdialdeko ordu estandarra", "MST": "Ipar Amerikako mendialdeko ordu estandarra", "MYT": "Malaysiako ordua", "NZDT": "Zeelanda Berriko udako ordua", "NZST": "Zeelanda Berriko ordu estandarra", "OESZ": "Europako ekialdeko udako ordua", "OEZ": "Europako ekialdeko ordu estandarra", "PDT": "Ipar Amerikako Pazifikoko udako ordua", "PST": "Ipar Amerikako Pazifikoko ordu estandarra", "SAST": "Afrikako hegoaldeko ordua", "SGT": "Singapurreko ordu estandarra", "SRT": "Surinamgo ordua", "TMST": "Turkmenistango udako ordua", "TMT": "Turkmenistango ordu estandarra", "UYST": "Uruguaiko udako ordua", "UYT": "Uruguaiko ordu estandarra", "VET": "Venezuelako ordua", "WARST": "Argentina mendebaldeko udako ordua", "WART": "Argentina mendebaldeko ordu estandarra", "WAST": "Afrikako mendebaldeko udako ordua", "WAT": "Afrikako mendebaldeko ordu estandarra", "WESZ": "Europako mendebaldeko udako ordua", "WEZ": "Europako mendebaldeko ordu estandarra", "WIB": "Indonesiako mendebaldeko ordua", "WIT": "Indonesiako ekialdeko ordua", "WITA": "Indonesiako erdialdeko ordua", "∅∅∅": "Azoreetako udako ordua"},
+		timezones:              map[string]string{"ACDT": "Australiako erdialdeko udako ordua", "ACST": "Australiako erdialdeko ordu estandarra", "ACWDT": "Australiako erdi-mendebaldeko udako ordua", "ACWST": "Australiako erdi-mendebaldeko ordu estandarra", "ADT": "Ipar Amerikako Atlantikoko udako ordua", "AEDT": "Australiako ekialdeko udako ordua", "AEST": "Australiako ekialdeko ordu estandarra", "AKDT": "Alaskako udako ordua", "AKST": "Alaskako ordu estandarra", "ARST": "Argentinako udako ordua", "ART": "Argentinako ordu estandarra", "AST": "Ipar Amerikako Atlantikoko ordu estandarra", "AWDT": "Australiako mendebaldeko udako ordua", "AWST": "Australiako mendebaldeko ordu estandarra", "BOT": "Boliviako ordua", "BT": "Bhutango ordua", "CAT": "Afrikako erdialdeko ordua", "CDT": "Ipar Amerikako erdialdeko udako ordua", "CHADT": "Chathamgo udako ordua", "CHAST": "Chathamgo ordu estandarra", "CLST": "Txileko udako ordua", "CLT": "Txileko ordu estandarra", "COST": "Kolonbiako udako ordua", "COT": "Kolonbiako ordu estandarra", "CST": "Ipar Amerikako erdialdeko ordu estandarra", "ChST": "Chamorroko ordu estandarra", "EAT": "Afrikako ekialdeko ordua", "ECT": "Ekuadorreko ordua", "EDT": "Ipar Amerikako ekialdeko udako ordua", "EST": "Ipar Amerikako ekialdeko ordu estandarra", "GFT": "Guyana Frantseseko ordua", "GMT": "Greenwichko meridianoaren ordua", "GST": "Golkoko ordu estandarra", "GYT": "Guyanako ordua", "HADT": "Hawaii-Aleutiar uharteetako udako ordua", "HAST": "Hawaii-Aleutiar uharteetako ordu estandarra", "HAT": "Ternuako udako ordua", "HECU": "Kubako udako ordua", "HEEG": "Groenlandiako ekialdeko udako ordua", "HENOMX": "Mexikoko ipar-ekialdeko udako ordua", "HEOG": "Groenlandiako mendebaldeko udako ordua", "HEPM": "Saint-Pierre eta Mikeluneko udako ordua", "HEPMX": "Mexikoko Pazifikoko udako ordua", "HKST": "Hong Kongo udako ordua", "HKT": "Hong Kongo ordu estandarra", "HNCU": "Kubako ordu estandarra", "HNEG": "Groenlandiako ekialdeko ordu estandarra", "HNNOMX": "Mexikoko ipar-ekialdeko ordu estandarra", "HNOG": "Groenlandiako mendebaldeko ordu estandarra", "HNPM": "Saint-Pierre eta Mikeluneko ordu estandarra", "HNPMX": "Mexikoko Pazifikoko ordu estandarra", "HNT": "Ternuako ordu estandarra", "IST": "Indiako ordua", "JDT": "Japoniako udako ordua", "JST": "Japoniako ordu estandarra", "LHDT": "Lord Howeko udako ordua", "LHST": "Lord Howeko ordu estandarra", "MDT": "MDT", "MESZ": "Europako erdialdeko udako ordua", "MEZ": "Europako erdialdeko ordu estandarra", "MST": "MST", "MYT": "Malaysiako ordua", "NZDT": "Zeelanda Berriko udako ordua", "NZST": "Zeelanda Berriko ordu estandarra", "OESZ": "Europako ekialdeko udako ordua", "OEZ": "Europako ekialdeko ordu estandarra", "PDT": "Ipar Amerikako Pazifikoko udako ordua", "PST": "Ipar Amerikako Pazifikoko ordu estandarra", "SAST": "Afrikako hegoaldeko ordua", "SGT": "Singapurreko ordu estandarra", "SRT": "Surinamgo ordua", "TMST": "Turkmenistango udako ordua", "TMT": "Turkmenistango ordu estandarra", "UYST": "Uruguaiko udako ordua", "UYT": "Uruguaiko ordu estandarra", "VET": "Venezuelako ordua", "WARST": "Argentina mendebaldeko udako ordua", "WART": "Argentina mendebaldeko ordu estandarra", "WAST": "Afrikako mendebaldeko udako ordua", "WAT": "Afrikako mendebaldeko ordu estandarra", "WESZ": "Europako mendebaldeko udako ordua", "WEZ": "Europako mendebaldeko ordu estandarra", "WIB": "Indonesiako mendebaldeko ordua", "WIT": "Indonesiako ekialdeko ordua", "WITA": "Indonesiako erdialdeko ordua", "∅∅∅": "Peruko udako ordua"},
 	}
 }
 
@@ -510,6 +510,40 @@ func (eu *eu) FmtDateFull(t time.Time) string {
 	b = append(b, []byte{0x28, 0x61}...)
 	b = append(b, []byte{0x29, 0x2c, 0x20}...)
 	b = append(b, eu.daysWide[t.Weekday()]...)
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'eu'
+func (eu *eu) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, []byte{0x65}...)
+	b = append(b, []byte{0x6b, 0x6f}...)
+	b = append(b, eu.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x61}...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'eu'
+func (eu *eu) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	b = append(b, []byte{0x65}...)
+	b = append(b, []byte{0x6b, 0x6f}...)
+	b = append(b, eu.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x61}...)
 
 	return string(b)
 }

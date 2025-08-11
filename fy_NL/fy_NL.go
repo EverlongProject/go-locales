@@ -73,7 +73,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"f.Kr.", "n.Kr."},
 		erasNarrow:             []string{"f.K.", "n.K."},
 		erasWide:               []string{"Foar Kristus", "nei Kristus"},
-		timezones:              map[string]string{"ACDT": "Midden-Australyske simmertiid", "ACST": "Midden-Australyske standerttiid", "ACWDT": "Midden-Australyske westelijke simmertiid", "ACWST": "Midden-Australyske westelijke standerttiid", "ADT": "Atlantic-simmertiid", "AEDT": "East-Australyske simmertiid", "AEST": "East-Australyske standerttiid", "AKDT": "Alaska-simmertiid", "AKST": "Alaska-standerttiid", "ARST": "Argentynske simmertiid", "ART": "Argentynske standerttiid", "AST": "Atlantic-standerttiid", "AWDT": "West-Australyske simmertiid", "AWST": "West-Australyske standerttiid", "BOT": "Boliviaanske tiid", "BT": "Bhutaanske tiid", "CAT": "Sintraal-Afrikaanske tiid", "CDT": "Central-simmertiid", "CHADT": "Chatham simmertiid", "CHAST": "Chatham standerttiid", "CLST": "Sileenske simmertiid", "CLT": "Sileenske standerttiid", "COST": "Kolombiaanske simmertiid", "COT": "Kolombiaanske standerttiid", "CST": "Central-standerttiid", "ChST": "Chamorro-tiid", "EAT": "East-Afrikaanske tiid", "ECT": "Ecuadoraanske tiid", "EDT": "Eastern-simmertiid", "EST": "Eastern-standerttiid", "GFT": "Frâns-Guyaanske tiid", "GMT": "Greenwich Mean Time", "GST": "Golf standerttiid", "GYT": "Guyaanske tiid", "HADT": "Hawaii-Aleoetyske simmertiid", "HAST": "Hawaii-Aleoetyske standerttiid", "HAT": "Newfoundlânske-simmertiid", "HECU": "Kubaanske simmertiid", "HEEG": "East-Groenlânske simmertiid", "HENOMX": "HENOMX", "HEOG": "West-Groenlânske simmertiid", "HEPM": "Saint Pierre en Miquelon-simmertiid", "HEPMX": "HEPMX", "HKST": "Hongkongse simmertiid", "HKT": "Hongkongse standerttiid", "HNCU": "Kubaanske standerttiid", "HNEG": "East-Groenlânske standerttiid", "HNNOMX": "HNNOMX", "HNOG": "West-Groenlânske standerttiid", "HNPM": "Saint Pierre en Miquelon-standerttiid", "HNPMX": "HNPMX", "HNT": "Newfoundlânske-standerttiid", "IST": "Yndiaaske tiid", "JDT": "Japanske simmertiid", "JST": "Japanske standerttiid", "LHDT": "Lord Howe-eilânske simmertiid", "LHST": "Lord Howe-eilânske standerttiid", "MDT": "Macause simmertiid", "MESZ": "Midden-Europeeske simmertiid", "MEZ": "Midden-Europeeske standerttiid", "MST": "Macause standerttiid", "MYT": "Maleisyske tiid", "NZDT": "Nij-Seelânske simmertiid", "NZST": "Nij-Seelânske standerttiid", "OESZ": "East-Europeeske simmertiid", "OEZ": "East-Europeeske standerttiid", "PDT": "Pasifik-simmertiid", "PST": "Pasifik-standerttiid", "SAST": "Sûd-Afrikaanske tiid", "SGT": "Singaporese standerttiid", "SRT": "Surinaamske tiid", "TMST": "Turkmeense simmertiid", "TMT": "Turkmeense standerttiid", "UYST": "Uruguayaanske simmertiid", "UYT": "Uruguayaanske standerttiid", "VET": "Fenezolaanske tiid", "WARST": "West-Argentynske simmertiid", "WART": "West-Argentynske standerttiid", "WAST": "West-Afrikaanske simmertiid", "WAT": "West-Afrikaanske standerttiid", "WESZ": "West-Europeeske simmertiid", "WEZ": "West-Europeeske standerttiid", "WIB": "West-Yndonezyske tiid", "WIT": "East-Yndonezyske tiid", "WITA": "Sintraal-Yndonezyske tiid", "∅∅∅": "Peruaanske simmertiid"},
+		timezones:              map[string]string{"ACDT": "Midden-Australyske simmertiid", "ACST": "Midden-Australyske standerttiid", "ACWDT": "Midden-Australyske westelijke simmertiid", "ACWST": "Midden-Australyske westelijke standerttiid", "ADT": "Atlantic-simmertiid", "AEDT": "East-Australyske simmertiid", "AEST": "East-Australyske standerttiid", "AKDT": "Alaska-simmertiid", "AKST": "Alaska-standerttiid", "ARST": "Argentynske simmertiid", "ART": "Argentynske standerttiid", "AST": "Atlantic-standerttiid", "AWDT": "West-Australyske simmertiid", "AWST": "West-Australyske standerttiid", "BOT": "Boliviaanske tiid", "BT": "Bhutaanske tiid", "CAT": "Sintraal-Afrikaanske tiid", "CDT": "Central-simmertiid", "CHADT": "Chatham simmertiid", "CHAST": "Chatham standerttiid", "CLST": "Sileenske simmertiid", "CLT": "Sileenske standerttiid", "COST": "Kolombiaanske simmertiid", "COT": "Kolombiaanske standerttiid", "CST": "Central-standerttiid", "ChST": "Chamorro-tiid", "EAT": "East-Afrikaanske tiid", "ECT": "Ecuadoraanske tiid", "EDT": "Eastern-simmertiid", "EST": "Eastern-standerttiid", "GFT": "Frâns-Guyaanske tiid", "GMT": "Greenwich Mean Time", "GST": "Golf standerttiid", "GYT": "Guyaanske tiid", "HADT": "Hawaii-Aleoetyske simmertiid", "HAST": "Hawaii-Aleoetyske standerttiid", "HAT": "Newfoundlânske-simmertiid", "HECU": "Kubaanske simmertiid", "HEEG": "East-Groenlânske simmertiid", "HENOMX": "HENOMX", "HEOG": "West-Groenlânske simmertiid", "HEPM": "Saint Pierre en Miquelon-simmertiid", "HEPMX": "HEPMX", "HKST": "Hongkongse simmertiid", "HKT": "Hongkongse standerttiid", "HNCU": "Kubaanske standerttiid", "HNEG": "East-Groenlânske standerttiid", "HNNOMX": "HNNOMX", "HNOG": "West-Groenlânske standerttiid", "HNPM": "Saint Pierre en Miquelon-standerttiid", "HNPMX": "HNPMX", "HNT": "Newfoundlânske-standerttiid", "IST": "Yndiaaske tiid", "JDT": "Japanske simmertiid", "JST": "Japanske standerttiid", "LHDT": "Lord Howe-eilânske simmertiid", "LHST": "Lord Howe-eilânske standerttiid", "MDT": "Mountain-simmertiid", "MESZ": "Midden-Europeeske simmertiid", "MEZ": "Midden-Europeeske standerttiid", "MST": "Mountain-standerttiid", "MYT": "Maleisyske tiid", "NZDT": "Nij-Seelânske simmertiid", "NZST": "Nij-Seelânske standerttiid", "OESZ": "East-Europeeske simmertiid", "OEZ": "East-Europeeske standerttiid", "PDT": "Pasifik-simmertiid", "PST": "Pasifik-standerttiid", "SAST": "Sûd-Afrikaanske tiid", "SGT": "Singaporese standerttiid", "SRT": "Surinaamske tiid", "TMST": "Turkmeense simmertiid", "TMT": "Turkmeense standerttiid", "UYST": "Uruguayaanske simmertiid", "UYT": "Uruguayaanske standerttiid", "VET": "Fenezolaanske tiid", "WARST": "West-Argentynske simmertiid", "WART": "West-Argentynske standerttiid", "WAST": "West-Afrikaanske simmertiid", "WAT": "West-Afrikaanske standerttiid", "WESZ": "West-Europeeske simmertiid", "WEZ": "West-Europeeske standerttiid", "WIB": "West-Yndonezyske tiid", "WIT": "East-Yndonezyske tiid", "WITA": "Sintraal-Yndonezyske tiid", "∅∅∅": "Amazone-simmertiid"},
 	}
 }
 
@@ -491,6 +491,35 @@ func (fy *fy_NL) FmtDateFull(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x20}...)
 	b = append(b, fy.monthsWide[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'fy_NL'
+func (fy *fy_NL) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x20}...)
+	b = append(b, fy.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'fy_NL'
+func (fy *fy_NL) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, fy.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {

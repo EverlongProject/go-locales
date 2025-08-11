@@ -73,7 +73,7 @@ func New() locales.Translator {
 		erasAbbreviated:        []string{"B.e.öň", "B.e."},
 		erasNarrow:             []string{"", ""},
 		erasWide:               []string{"Isadan öň", "Isadan soň"},
-		timezones:              map[string]string{"ACDT": "Merkezi Awstraliýa tomusky wagty", "ACST": "Merkezi Awstraliýa standart wagty", "ACWDT": "Merkezi Awstraliýa günbatar tomusky wagty", "ACWST": "Merkezi Awstraliýa günbatar standart wagty", "ADT": "Atlantik tomusky wagty", "AEDT": "Gündogar Awstraliýa tomusky wagty", "AEST": "Gündogar Awstraliýa standart wagty", "AKDT": "Alýaska tomusky wagty", "AKST": "Alýaska standart wagty", "ARST": "Argentina tomusky wagty", "ART": "Argentina standart wagty", "AST": "Atlantik standart wagty", "AWDT": "Günbatar Awstraliýa tomusky wagty", "AWST": "Günbatar Awstraliýa standart wagty", "BOT": "Boliwiýa wagty", "BT": "Butan wagty", "CAT": "Merkezi Afrika wagty", "CDT": "Merkezi Amerika tomusky wagty", "CHADT": "Çatem tomusky wagty", "CHAST": "Çatem standart wagty", "CLST": "Çili tomusky wagty", "CLT": "Çili standart wagty", "COST": "Kolumbiýa tomusky wagty", "COT": "Kolumbiýa standart wagty", "CST": "Merkezi Amerika standart wagty", "ChST": "Çamorro wagty", "EAT": "Gündogar Afrika wagty", "ECT": "Ekwador wagty", "EDT": "Demirgazyk Amerika gündogar tomusky wagty", "EST": "Demirgazyk Amerika gündogar standart wagty", "GFT": "Fransuz Gwianasy wagty", "GMT": "Grinwiç boýunça orta wagt", "GST": "Pars aýlagy standart wagty", "GYT": "Gaýana wagty", "HADT": "Gawaý-Aleut tomusky wagty", "HAST": "Gawaý-Aleut standart wagty", "HAT": "Nýufaundlend tomusky wagty", "HECU": "Kuba tomusky wagty", "HEEG": "Gündogar Grenlandiýa tomusky wagty", "HENOMX": "Demirgazyk-günbatar Meksika tomusky wagty", "HEOG": "Günbatar Grenlandiýa tomusky wagty", "HEPM": "Sen-Pýer we Mikelon tomusky wagty", "HEPMX": "Meksikan Ýuwaş umman tomusky wagty", "HKST": "Gonkong tomusky wagty", "HKT": "Gonkong standart wagty", "HNCU": "Kuba standart wagty", "HNEG": "Gündogar Grenlandiýa standart wagty", "HNNOMX": "Demirgazyk-günbatar Meksika standart wagty", "HNOG": "Günbatar Grenlandiýa standart wagty", "HNPM": "Sen-Pýer we Mikelon standart wagty", "HNPMX": "Meksikan Ýuwaş umman standart wagty", "HNT": "Nýufaundlend standart wagty", "IST": "Hindistan standart wagty", "JDT": "Ýaponiýa tomusky wagty", "JST": "Ýaponiýa standart wagty", "LHDT": "Lord-Hau tomusky wagty", "LHST": "Lord-Hau standart wagty", "MDT": "Demirgazyk Amerika dag tomusky wagty", "MESZ": "Merkezi Ýewropa tomusky wagty", "MEZ": "Merkezi Ýewropa standart wagty", "MST": "Demirgazyk Amerika dag standart wagty", "MYT": "Malaýziýa wagty", "NZDT": "Täze Zelandiýa tomusky wagty", "NZST": "Täze Zelandiýa standart wagty", "OESZ": "Gündogar Ýewropa tomusky wagty", "OEZ": "Gündogar Ýewropa standart wagty", "PDT": "Demirgazyk Amerika Ýuwaş umman tomusky wagty", "PST": "Demirgazyk Amerika Ýuwaş umman standart wagty", "SAST": "Günorta Afrika standart wagty", "SGT": "Singapur wagty", "SRT": "Surinam wagty", "TMST": "Türkmenistan tomusky wagty", "TMT": "Türkmenistan standart wagty", "UYST": "Urugwaý tomusky wagty", "UYT": "Urugwaý standart wagty", "VET": "Wenesuela wagty", "WARST": "Günbatar Argentina tomusky wagty", "WART": "Günbatar Argentina standart wagty", "WAST": "Günbatar Afrika tomusky wagty", "WAT": "Günbatar Afrika standart wagty", "WESZ": "Günbatar Ýewropa tomusky wagty", "WEZ": "Günbatar Ýewropa standart wagty", "WIB": "Günbatar Indoneziýa wagty", "WIT": "Gündogar Indoneziýa wagty", "WITA": "Merkezi Indoneziýa wagty", "∅∅∅": "Azor adalary tomusky wagty"},
+		timezones:              map[string]string{"ACDT": "Merkezi Awstraliýa tomusky wagty", "ACST": "Merkezi Awstraliýa standart wagty", "ACWDT": "Merkezi Awstraliýa günbatar tomusky wagty", "ACWST": "Merkezi Awstraliýa günbatar standart wagty", "ADT": "Atlantik tomusky wagty", "AEDT": "Gündogar Awstraliýa tomusky wagty", "AEST": "Gündogar Awstraliýa standart wagty", "AKDT": "Alýaska tomusky wagty", "AKST": "Alýaska standart wagty", "ARST": "Argentina tomusky wagty", "ART": "Argentina standart wagty", "AST": "Atlantik standart wagty", "AWDT": "Günbatar Awstraliýa tomusky wagty", "AWST": "Günbatar Awstraliýa standart wagty", "BOT": "Boliwiýa wagty", "BT": "Butan wagty", "CAT": "Merkezi Afrika wagty", "CDT": "Merkezi Amerika tomusky wagty", "CHADT": "Çatem tomusky wagty", "CHAST": "Çatem standart wagty", "CLST": "Çili tomusky wagty", "CLT": "Çili standart wagty", "COST": "Kolumbiýa tomusky wagty", "COT": "Kolumbiýa standart wagty", "CST": "Merkezi Amerika standart wagty", "ChST": "Çamorro wagty", "EAT": "Gündogar Afrika wagty", "ECT": "Ekwador wagty", "EDT": "Demirgazyk Amerika gündogar tomusky wagty", "EST": "Demirgazyk Amerika gündogar standart wagty", "GFT": "Fransuz Gwianasy wagty", "GMT": "Grinwiç boýunça orta wagt", "GST": "Pars aýlagy standart wagty", "GYT": "Gaýana wagty", "HADT": "Gawaý-Aleut tomusky wagty", "HAST": "Gawaý-Aleut standart wagty", "HAT": "Nýufaundlend tomusky wagty", "HECU": "Kuba tomusky wagty", "HEEG": "Gündogar Grenlandiýa tomusky wagty", "HENOMX": "Demirgazyk-günbatar Meksika tomusky wagty", "HEOG": "Günbatar Grenlandiýa tomusky wagty", "HEPM": "Sen-Pýer we Mikelon tomusky wagty", "HEPMX": "Meksikan Ýuwaş umman tomusky wagty", "HKST": "Gonkong tomusky wagty", "HKT": "Gonkong standart wagty", "HNCU": "Kuba standart wagty", "HNEG": "Gündogar Grenlandiýa standart wagty", "HNNOMX": "Demirgazyk-günbatar Meksika standart wagty", "HNOG": "Günbatar Grenlandiýa standart wagty", "HNPM": "Sen-Pýer we Mikelon standart wagty", "HNPMX": "Meksikan Ýuwaş umman standart wagty", "HNT": "Nýufaundlend standart wagty", "IST": "Hindistan standart wagty", "JDT": "Ýaponiýa tomusky wagty", "JST": "Ýaponiýa standart wagty", "LHDT": "Lord-Hau tomusky wagty", "LHST": "Lord-Hau standart wagty", "MDT": "Demirgazyk Amerika dag tomusky wagty", "MESZ": "Merkezi Ýewropa tomusky wagty", "MEZ": "Merkezi Ýewropa standart wagty", "MST": "Demirgazyk Amerika dag standart wagty", "MYT": "Malaýziýa wagty", "NZDT": "Täze Zelandiýa tomusky wagty", "NZST": "Täze Zelandiýa standart wagty", "OESZ": "Gündogar Ýewropa tomusky wagty", "OEZ": "Gündogar Ýewropa standart wagty", "PDT": "Demirgazyk Amerika Ýuwaş umman tomusky wagty", "PST": "Demirgazyk Amerika Ýuwaş umman standart wagty", "SAST": "Günorta Afrika standart wagty", "SGT": "Singapur wagty", "SRT": "Surinam wagty", "TMST": "Türkmenistan tomusky wagty", "TMT": "Türkmenistan standart wagty", "UYST": "Urugwaý tomusky wagty", "UYT": "Urugwaý standart wagty", "VET": "Wenesuela wagty", "WARST": "Günbatar Argentina tomusky wagty", "WART": "Günbatar Argentina standart wagty", "WAST": "Günbatar Afrika tomusky wagty", "WAT": "Günbatar Afrika standart wagty", "WESZ": "Günbatar Ýewropa tomusky wagty", "WEZ": "Günbatar Ýewropa standart wagty", "WIB": "Günbatar Indoneziýa wagty", "WIT": "Gündogar Indoneziýa wagty", "WITA": "Merkezi Indoneziýa wagty", "∅∅∅": "Peru tomusky wagty"},
 	}
 }
 
@@ -510,6 +510,35 @@ func (tk *tk) FmtDateFull(t time.Time) string {
 
 	b = append(b, []byte{0x20}...)
 	b = append(b, tk.daysWide[t.Weekday()]...)
+
+	return string(b)
+}
+
+// FmtMonthDayMedium returns the medium date month and day representation of 't' for 'tk'
+func (tk *tk) FmtMonthDayMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x20}...)
+	b = append(b, tk.monthsAbbreviated[t.Month()]...)
+
+	return string(b)
+}
+
+// FmtMonthYearMedium returns the medium date month and year representation of 't' for 'tk'
+func (tk *tk) FmtMonthYearMedium(t time.Time) string {
+
+	b := make([]byte, 0, 32)
+
+	b = append(b, tk.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20}...)
+
+	if t.Year() > 0 {
+		b = strconv.AppendInt(b, int64(t.Year()), 10)
+	} else {
+		b = strconv.AppendInt(b, int64(-t.Year()), 10)
+	}
 
 	return string(b)
 }
