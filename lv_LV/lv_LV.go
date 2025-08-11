@@ -100,8 +100,8 @@ func (lv *lv_LV) CardinalPluralRule(num float64, v uint64) locales.PluralRule {
 
 	n := math.Abs(num)
 	f := locales.F(n, v)
-	nMod10 := math.Mod(n, 10)
 	nMod100 := math.Mod(n, 100)
+	nMod10 := math.Mod(n, 10)
 	fMod100 := f % 100
 	fMod10 := f % 10
 

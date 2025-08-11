@@ -103,10 +103,10 @@ func (bs *bs_Latn_BA) CardinalPluralRule(num float64, v uint64) locales.PluralRu
 	n := math.Abs(num)
 	i := int64(n)
 	f := locales.F(n, v)
-	iMod10 := i % 10
 	iMod100 := i % 100
-	fMod100 := f % 100
+	iMod10 := i % 10
 	fMod10 := f % 10
+	fMod100 := f % 100
 
 	if (v == 0 && iMod10 == 1 && iMod100 != 11) || (fMod10 == 1 && fMod100 != 11) {
 		return locales.PluralRuleOne
