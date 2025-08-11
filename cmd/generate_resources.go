@@ -1030,9 +1030,8 @@ func postProcess(cldr *cldr.CLDR) {
 
 			ttz, ok := trans.timezones[k]
 			if !ok {
-				// If locale doesn't have its own timezone names, skip adding abbreviations
-				// that map to themselves - only add if we have meaningful long-form names
-				continue
+				ttz = v
+				trans.timezones[k] = v
 			}
 
 			tz[v.standard] = ttz.standard

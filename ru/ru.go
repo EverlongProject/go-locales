@@ -100,8 +100,8 @@ func (ru *ru) CardinalPluralRule(num float64, v uint64) locales.PluralRule {
 
 	n := math.Abs(num)
 	i := int64(n)
-	iMod100 := i % 100
 	iMod10 := i % 10
+	iMod100 := i % 100
 
 	if v == 0 && iMod10 == 1 && iMod100 != 11 {
 		return locales.PluralRuleOne
