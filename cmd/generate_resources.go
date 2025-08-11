@@ -337,12 +337,12 @@ func getCurrencyMappingForLocale(locale string) CurrencyMapping {
 	// Normalize locale to lowercase for comparison
 	localeKey := strings.ToLower(locale)
 
-	// Check if locale is CA-related (Canada) - special case for fr_CA
-	if strings.HasSuffix(localeKey, "_ca") {
+	// Check if locale is fr_CA (special case - treated as French but with different USD/AUD format)
+	if localeKey == "fr_ca" {
 		return CurrencyMapping{
 			CAD: "$",   // CAD -> $
-			USD: "US$", // USD -> $ US
-			AUD: "AU$", // AUD -> $ AU
+			USD: "$US", // USD -> $US
+			AUD: "$AU", // AUD -> $AU
 			GBP: "£",   // GBP -> £
 			EUR: "€",   // EUR -> €
 		}
@@ -354,6 +354,17 @@ func getCurrencyMappingForLocale(locale string) CurrencyMapping {
 			CAD: "$CA", // CAD -> $CA
 			USD: "$US", // USD -> $US
 			AUD: "$AU", // AUD -> $AU
+			GBP: "£",   // GBP -> £
+			EUR: "€",   // EUR -> €
+		}
+	}
+
+	// Check if locale is CA-related (Canada), such as en_CA
+	if strings.HasSuffix(localeKey, "_ca") {
+		return CurrencyMapping{
+			CAD: "$",   // CAD -> $
+			USD: "US$", // USD -> US$
+			AUD: "AU$", // AUD -> AU$
 			GBP: "£",   // GBP -> £
 			EUR: "€",   // EUR -> €
 		}
@@ -381,14 +392,8 @@ func getCurrencyMappingForLocale(locale string) CurrencyMapping {
 		}
 	}
 
-	// Default for all other locales
-	return CurrencyMapping{
-		CAD: "CA$", // CAD -> CA$
-		USD: "US$", // USD -> US$
-		AUD: "AU$", // AUD -> AU$
-		GBP: "£",   // GBP -> £
-		EUR: "€",   // EUR -> €
-	}
+	// No default mapping for other locales - return empty mapping
+	return CurrencyMapping{}
 }
 
 // applyCurrencyOverrides applies currency symbol overrides based on locale
@@ -412,14 +417,23 @@ func applyCurrencyOverrides(trans *translator) {
 		return // Empty currencies array
 	}
 
-	// Apply currency replacements using string replacement
-	// This is more reliable than parsing the individual items
-	currencyReplacements := map[string]string{
-		`"CAD"`: fmt.Sprintf(`"%s"`, mapping.CAD),
-		`"USD"`: fmt.Sprintf(`"%s"`, mapping.USD),
-		`"AUD"`: fmt.Sprintf(`"%s"`, mapping.AUD),
-		`"GBP"`: fmt.Sprintf(`"%s"`, mapping.GBP),
-		`"EUR"`: fmt.Sprintf(`"%s"`, mapping.EUR),
+	// Only apply replacements for non-empty mapping values to preserve original currency codes
+	currencyReplacements := map[string]string{}
+
+	if mapping.CAD != "" {
+		currencyReplacements[`"CAD"`] = fmt.Sprintf(`"%s"`, mapping.CAD)
+	}
+	if mapping.USD != "" {
+		currencyReplacements[`"USD"`] = fmt.Sprintf(`"%s"`, mapping.USD)
+	}
+	if mapping.AUD != "" {
+		currencyReplacements[`"AUD"`] = fmt.Sprintf(`"%s"`, mapping.AUD)
+	}
+	if mapping.GBP != "" {
+		currencyReplacements[`"GBP"`] = fmt.Sprintf(`"%s"`, mapping.GBP)
+	}
+	if mapping.EUR != "" {
+		currencyReplacements[`"EUR"`] = fmt.Sprintf(`"%s"`, mapping.EUR)
 	}
 
 	// Apply replacements
@@ -457,20 +471,21 @@ func applyPeriodOverrides(trans *translator) {
 	}
 }
 
-// applyCurrencySuffixOverrides systematically replaces " k" suffixes with " " in currency formatting
+// applyCurrencySuffixOverrides systematically replaces "k" suffixes with " " in currency formatting
+// This handles both regular space + k (" k") and non-breaking space + k ("\u00a0k") patterns
 func applyCurrencySuffixOverrides(trans *translator) {
-	// Pattern to find and replace: " k" -> " "
-	kSuffixPattern := " k"
+	// Pattern to find and replace: any suffix ending with "k" -> " "
+	kSuffixPattern := "k"
 	spaceSuffix := " "
 
 	// Update FmtCurrencySuffix (positive currency suffix)
 	if strings.HasSuffix(trans.FmtCurrencySuffix, kSuffixPattern) {
-		trans.FmtCurrencySuffix = strings.ReplaceAll(trans.FmtCurrencySuffix, kSuffixPattern, spaceSuffix)
+		trans.FmtCurrencySuffix = spaceSuffix
 	}
 
 	// Update FmtCurrencyNegativeSuffix (negative currency suffix)
 	if strings.HasSuffix(trans.FmtCurrencyNegativeSuffix, kSuffixPattern) {
-		trans.FmtCurrencyNegativeSuffix = strings.ReplaceAll(trans.FmtCurrencyNegativeSuffix, kSuffixPattern, spaceSuffix)
+		trans.FmtCurrencyNegativeSuffix = spaceSuffix
 	}
 }
 
@@ -519,8 +534,8 @@ func applyOverrides(trans *translator) {
 	// Apply period overrides (a.m./p.m. -> am/pm) for all locales
 	applyPeriodOverrides(trans)
 
-	// Apply currency suffix overrides (" k" -> " ") for all locales
-	applyCurrencySuffixOverrides(trans)
+	// Note: Currency suffix overrides moved to after parseCurrencyNumberFormat
+	// to ensure " k" suffixes are properly processed
 
 	// Apply month abbreviation overrides (remove periods) for English-related locales
 	applyMonthAbbreviationOverrides(trans)
@@ -994,6 +1009,9 @@ func postProcess(cldr *cldr.CLDR) {
 		parseDecimalNumberFormat(trans)
 		parsePercentNumberFormat(trans)
 		parseCurrencyNumberFormat(trans)
+
+		// Apply currency suffix overrides AFTER parsing to handle " k" suffixes
+		applyCurrencySuffixOverrides(trans)
 	}
 
 	fmt.Printf("=== FINAL PROCESSING LOOP: Found %d translators ===\n", len(translators))
@@ -1028,8 +1046,22 @@ func postProcess(cldr *cldr.CLDR) {
 
 		// Generate month-day and month-year patterns from the raw medium date format BEFORE processing
 		if trans.FmtDateMedium != "" {
-			trans.FmtMonthDayMedium = parseMonthDayFormat(trans.BaseLocale, trans.FmtDateMedium)
-			trans.FmtMonthYearMedium = parseMonthYearFormat(trans.BaseLocale, trans.FmtDateMedium)
+			// Generate if these fields are still empty (either never set or inheritance didn't provide them)
+			if trans.FmtMonthDayMedium == "" {
+				trans.FmtMonthDayMedium = parseMonthDayFormat(trans.BaseLocale, trans.FmtDateMedium)
+			}
+			if trans.FmtMonthYearMedium == "" {
+				trans.FmtMonthYearMedium = parseMonthYearFormat(trans.BaseLocale, trans.FmtDateMedium)
+			}
+		} else {
+			// For locales without FmtDateMedium, provide empty fallback implementations
+			// to satisfy the interface requirements while maintaining consistency
+			if trans.FmtMonthDayMedium == "" {
+				trans.FmtMonthDayMedium = " " // Set to non-empty to trigger template generation with empty body
+			}
+			if trans.FmtMonthYearMedium == "" {
+				trans.FmtMonthYearMedium = " " // Set to non-empty to trigger template generation with empty body
+			}
 		}
 
 		trans.FmtDateShort, trans.FmtDateMedium, trans.FmtDateLong, trans.FmtDateFull = parseDateFormats(trans, trans.FmtDateShort, trans.FmtDateMedium, trans.FmtDateLong, trans.FmtDateFull)
