@@ -493,6 +493,7 @@ func (smn *smn) FmtMonthDayMedium(t time.Time) string {
 	b = append(b, smn.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x20}...)
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0x2e}...)
 
 	return string(b)
 }
@@ -503,6 +504,7 @@ func (smn *smn) FmtMonthYearMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = append(b, smn.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20, 0x2e, 0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)

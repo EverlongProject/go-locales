@@ -548,7 +548,8 @@ func (lv *lv_LV) FmtMonthYearMedium(t time.Time) string {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
 
-	b = append(b, []byte{0x67, 0x61, 0x64, 0x61}...)
+	b = append(b, []byte{0x2e, 0x20, 0x67, 0x61, 0x64, 0x61}...)
+	b = append(b, []byte{0x20, 0x2e, 0x20}...)
 	b = append(b, lv.monthsAbbreviated[t.Month()]...)
 
 	return string(b)

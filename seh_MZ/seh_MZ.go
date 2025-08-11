@@ -410,7 +410,8 @@ func (seh *seh_MZ) FmtMonthDayMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
-	b = append(b, []byte{0x64, 0x65}...)
+	b = append(b, []byte{0x20, 0x64, 0x65}...)
+	b = append(b, []byte{0x20}...)
 	b = append(b, seh.monthsAbbreviated[t.Month()]...)
 	b = append(b, []byte{0x64, 0x65}...)
 
@@ -424,7 +425,8 @@ func (seh *seh_MZ) FmtMonthYearMedium(t time.Time) string {
 
 	b = append(b, []byte{0x64, 0x65}...)
 	b = append(b, seh.monthsAbbreviated[t.Month()]...)
-	b = append(b, []byte{0x64, 0x65}...)
+	b = append(b, []byte{0x20, 0x64, 0x65}...)
+	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)

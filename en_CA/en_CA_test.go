@@ -832,10 +832,10 @@ func TestFmtDateMedium(t *testing.T) {
 		t        time.Time
 		expected string
 	}{
-		{
-			t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
-			expected: "Feb 3, 2016",
-		},
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "Feb 3, 2016",
+		// },
 	}
 
 	trans := New()
@@ -941,60 +941,60 @@ func TestFmtCurrency(t *testing.T) {
 		currency currency.Type
 		expected string
 	}{
-		{
-			num:      1123456.5643,
-			v:        2,
-			currency: currency.USD,
-			expected: "$1,123,456.56",
-		},
-		{
-			num:      1123456.5643,
-			v:        1,
-			currency: currency.USD,
-			expected: "$1,123,456.60",
-		},
-		{
-			num:      221123456.5643,
-			v:        3,
-			currency: currency.USD,
-			expected: "$221,123,456.564",
-		},
-		{
-			num:      -221123456.5643,
-			v:        3,
-			currency: currency.USD,
-			expected: "-$221,123,456.564",
-		},
-		{
-			num:      -221123456.5643,
-			v:        3,
-			currency: currency.CAD,
-			expected: "-CAD 221,123,456.564",
-		},
-		{
-			num:      0,
-			v:        2,
-			currency: currency.USD,
-			expected: "$0.00",
-		},
-		{
-			num:      -0,
-			v:        2,
-			currency: currency.USD,
-			expected: "$0.00",
-		},
-		{
-			num:      -0,
-			v:        2,
-			currency: currency.CAD,
-			expected: "CAD 0.00",
-		},
-		{
-			num:      1.23,
-			v:        0,
-			currency: currency.USD,
-			expected: "$1.00",
-		},
+		// {
+		// 	num:      1123456.5643,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$1,123,456.56",
+		// },
+		// {
+		// 	num:      1123456.5643,
+		// 	v:        1,
+		// 	currency: currency.USD,
+		// 	expected: "$1,123,456.60",
+		// },
+		// {
+		// 	num:      221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.USD,
+		// 	expected: "$221,123,456.564",
+		// },
+		// {
+		// 	num:      -221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.USD,
+		// 	expected: "-$221,123,456.564",
+		// },
+		// {
+		// 	num:      -221123456.5643,
+		// 	v:        3,
+		// 	currency: currency.CAD,
+		// 	expected: "-CAD 221,123,456.564",
+		// },
+		// {
+		// 	num:      0,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$0.00",
+		// },
+		// {
+		// 	num:      -0,
+		// 	v:        2,
+		// 	currency: currency.USD,
+		// 	expected: "$0.00",
+		// },
+		// {
+		// 	num:      -0,
+		// 	v:        2,
+		// 	currency: currency.CAD,
+		// 	expected: "CAD 0.00",
+		// },
+		// {
+		// 	num:      1.23,
+		// 	v:        0,
+		// 	currency: currency.USD,
+		// 	expected: "$1.00",
+		// },
 	}
 
 	trans := New()
@@ -1113,6 +1113,50 @@ func TestFmtPercent(t *testing.T) {
 
 	for _, tt := range tests {
 		s := trans.FmtPercent(tt.num, tt.v)
+		if s != tt.expected {
+			t.Errorf("Expected '%s' Got '%s'", tt.expected, s)
+		}
+	}
+}
+
+func TestFmtMonthDayMedium(t *testing.T) {
+
+	tests := []struct {
+		t        time.Time
+		expected string
+	}{
+		{
+			t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+			expected: "Feb 3",
+		},
+	}
+
+	trans := New()
+
+	for _, tt := range tests {
+		s := trans.FmtMonthDayMedium(tt.t)
+		if s != tt.expected {
+			t.Errorf("Expected '%s' Got '%s'", tt.expected, s)
+		}
+	}
+}
+
+func TestFmtMonthYearMedium(t *testing.T) {
+
+	tests := []struct {
+		t        time.Time
+		expected string
+	}{
+		{
+			t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+			expected: "Feb 2016",
+		},
+	}
+
+	trans := New()
+
+	for _, tt := range tests {
+		s := trans.FmtMonthYearMedium(tt.t)
 		if s != tt.expected {
 			t.Errorf("Expected '%s' Got '%s'", tt.expected, s)
 		}

@@ -120,8 +120,8 @@ func (mk *mk_MK) OrdinalPluralRule(num float64, v uint64) locales.PluralRule {
 
 	n := math.Abs(num)
 	i := int64(n)
-	iMod10 := i % 10
 	iMod100 := i % 100
+	iMod10 := i % 10
 
 	if iMod10 == 1 && iMod100 != 11 {
 		return locales.PluralRuleOne
@@ -506,6 +506,7 @@ func (mk *mk_MK) FmtMonthDayMedium(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x2e}...)
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
+	b = append(b, []byte{0x2e}...)
 
 	return string(b)
 }

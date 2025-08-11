@@ -103,8 +103,8 @@ func (sr *sr_Latn_RS) CardinalPluralRule(num float64, v uint64) locales.PluralRu
 	n := math.Abs(num)
 	i := int64(n)
 	f := locales.F(n, v)
-	iMod100 := i % 100
 	iMod10 := i % 10
+	iMod100 := i % 100
 	fMod10 := f % 10
 	fMod100 := f % 100
 
@@ -552,6 +552,8 @@ func (sr *sr_Latn_RS) FmtMonthDayMedium(t time.Time) string {
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
 
+	b = append(b, []byte{0x2e}...)
+
 	return string(b)
 }
 
@@ -573,6 +575,8 @@ func (sr *sr_Latn_RS) FmtMonthYearMedium(t time.Time) string {
 	} else {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
+
+	b = append(b, []byte{0x2e}...)
 
 	return string(b)
 }

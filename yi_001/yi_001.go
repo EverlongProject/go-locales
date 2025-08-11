@@ -407,6 +407,7 @@ func (yi *yi_001) FmtMonthDayMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0xd7, 0x98, 0xd7, 0x9f, 0x20}...)
 	b = append(b, yi.monthsAbbreviated[t.Month()]...)
 
 	return string(b)

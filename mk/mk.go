@@ -506,6 +506,7 @@ func (mk *mk) FmtMonthDayMedium(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x2e}...)
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
+	b = append(b, []byte{0x2e}...)
 
 	return string(b)
 }

@@ -533,6 +533,7 @@ func (hy *hy) FmtMonthDayMedium(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x20}...)
 	b = append(b, hy.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0xd5, 0xa9}...)
 
 	return string(b)
 }
@@ -543,13 +544,15 @@ func (hy *hy) FmtMonthYearMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = append(b, hy.monthsAbbreviated[t.Month()]...)
-	b = append(b, []byte{0x2c, 0x20}...)
+	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)
 	} else {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
+
+	b = append(b, []byte{0xd5, 0xa9}...)
 
 	return string(b)
 }

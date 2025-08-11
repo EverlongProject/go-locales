@@ -1118,3 +1118,47 @@ func TestFmtPercent(t *testing.T) {
 		}
 	}
 }
+
+func TestFmtMonthDayMedium(t *testing.T) {
+
+	tests := []struct {
+		t        time.Time
+		expected string
+	}{
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "3 Feb",
+		// },
+	}
+
+	trans := New()
+
+	for _, tt := range tests {
+		s := trans.FmtMonthDayMedium(tt.t)
+		if s != tt.expected {
+			t.Errorf("Expected '%s' Got '%s'", tt.expected, s)
+		}
+	}
+}
+
+func TestFmtMonthYearMedium(t *testing.T) {
+
+	tests := []struct {
+		t        time.Time
+		expected string
+	}{
+		// {
+		// 	t:        time.Date(2016, 02, 03, 9, 0, 1, 0, time.UTC),
+		// 	expected: "Feb 2016",
+		// },
+	}
+
+	trans := New()
+
+	for _, tt := range tests {
+		s := trans.FmtMonthYearMedium(tt.t)
+		if s != tt.expected {
+			t.Errorf("Expected '%s' Got '%s'", tt.expected, s)
+		}
+	}
+}

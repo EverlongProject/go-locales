@@ -501,7 +501,8 @@ func (ee *ee_TG) FmtMonthYearMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = append(b, ee.monthsAbbreviated[t.Month()]...)
-	b = append(b, []byte{0x6c, 0x69, 0x61}...)
+	b = append(b, []byte{0x20, 0x20, 0x6c, 0x69, 0x61}...)
+	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)

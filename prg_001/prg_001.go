@@ -98,8 +98,8 @@ func (prg *prg_001) CardinalPluralRule(num float64, v uint64) locales.PluralRule
 	f := locales.F(n, v)
 	nMod10 := math.Mod(n, 10)
 	nMod100 := math.Mod(n, 100)
-	fMod10 := f % 10
 	fMod100 := f % 100
+	fMod10 := f % 10
 
 	if (nMod10 == 0) || (nMod100 >= 11 && nMod100 <= 19) || (v == 2 && fMod100 >= 11 && fMod100 <= 19) {
 		return locales.PluralRuleZero
@@ -541,7 +541,8 @@ func (prg *prg_001) FmtMonthYearMedium(t time.Time) string {
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
 
-	b = append(b, []byte{0x73, 0x74}...)
+	b = append(b, []byte{0x20, 0x73, 0x74}...)
+	b = append(b, []byte{0x2e, 0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)

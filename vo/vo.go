@@ -332,6 +332,7 @@ func (vo *vo) FmtMonthYearMedium(t time.Time) string {
 
 	b = append(b, []byte{0x20}...)
 	b = append(b, vo.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x2e}...)
 
 	return string(b)
 }

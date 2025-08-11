@@ -100,8 +100,8 @@ func (uk *uk) CardinalPluralRule(num float64, v uint64) locales.PluralRule {
 
 	n := math.Abs(num)
 	i := int64(n)
-	iMod100 := i % 100
 	iMod10 := i % 10
+	iMod100 := i % 100
 
 	if v == 0 && iMod10 == 1 && iMod100 != 11 {
 		return locales.PluralRuleOne
@@ -560,7 +560,7 @@ func (uk *uk) FmtMonthDayMedium(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x20}...)
 	b = append(b, uk.monthsAbbreviated[t.Month()]...)
-	b = append(b, []byte{0xc3, 0x91, 0xc2, 0x80}...)
+	b = append(b, []byte{0xd1, 0x80}...)
 
 	return string(b)
 }
@@ -579,7 +579,7 @@ func (uk *uk) FmtMonthYearMedium(t time.Time) string {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
 
-	b = append(b, []byte{0xc3, 0x91, 0xc2, 0x80}...)
+	b = append(b, []byte{0xd1, 0x80}...)
 
 	return string(b)
 }

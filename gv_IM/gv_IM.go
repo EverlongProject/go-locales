@@ -86,8 +86,8 @@ func (gv *gv_IM) CardinalPluralRule(num float64, v uint64) locales.PluralRule {
 
 	n := math.Abs(num)
 	i := int64(n)
-	iMod10 := i % 10
 	iMod100 := i % 100
+	iMod10 := i % 10
 
 	if v == 0 && iMod10 == 1 {
 		return locales.PluralRuleOne
@@ -457,6 +457,7 @@ func (gv *gv_IM) FmtMonthYearMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = append(b, gv.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)

@@ -562,12 +562,15 @@ func (ar *ar_DZ) FmtMonthDayMedium(t time.Time) string {
 	}
 
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0xe2, 0x80, 0x8f, 0x2f}...)
 
 	if t.Month() < 10 {
 		b = append(b, '0')
 	}
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
+
+	b = append(b, []byte{0xe2, 0x80, 0x8f}...)
 
 	return string(b)
 }
@@ -582,6 +585,8 @@ func (ar *ar_DZ) FmtMonthYearMedium(t time.Time) string {
 	}
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
+
+	b = append(b, []byte{0xe2, 0x80, 0x8f, 0x2f}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)
