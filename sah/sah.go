@@ -498,7 +498,7 @@ func (sah *sah) FmtMonthYearMedium(t time.Time) string {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
 
-	b = append(b, []byte{0x2c, 0x20}...)
+	b = append(b, []byte{0x20}...)
 	b = append(b, sah.monthsAbbreviated[t.Month()]...)
 
 	return string(b)

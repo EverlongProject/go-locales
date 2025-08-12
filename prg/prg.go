@@ -541,7 +541,8 @@ func (prg *prg) FmtMonthYearMedium(t time.Time) string {
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
 
-	b = append(b, []byte{0x73, 0x74}...)
+	b = append(b, []byte{0x20, 0x73, 0x74}...)
+	b = append(b, []byte{0x2e, 0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)

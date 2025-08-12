@@ -3185,16 +3185,33 @@ func filterDateFormat(format string, components []string) string {
 		return ""
 	}
 
+	// Check if this is a month-year combination for special comma handling
+	isMonthYear := false
+	hasMonth := false
+	hasYear := false
+	for _, comp := range components {
+		if comp == "M" {
+			hasMonth = true
+		}
+		if comp == "y" {
+			hasYear = true
+		}
+	}
+	isMonthYear = hasMonth && hasYear
+
 	result := ""
 	inQuotes := false
+	runes := []rune(format)
 	i := 0
 
-	for i < len(format) {
-		char := format[i]
+	componentFound := false
+
+	for i < len(runes) {
+		char := runes[i]
 
 		// Handle quoted text (literal text in format)
 		if char == '\'' {
-			if i+1 < len(format) && format[i+1] == '\'' {
+			if i+1 < len(runes) && runes[i+1] == '\'' {
 				// Double quote - add literal single quote to result
 				result += "''"
 				i += 2
@@ -3216,13 +3233,14 @@ func filterDateFormat(format string, components []string) string {
 		}
 
 		// Check if this character starts a date component we want to keep
-		kept := false
+		componentMatched := false
 		for _, component := range components {
-			if strings.HasPrefix(format[i:], component) {
+			if strings.HasPrefix(string(runes[i:]), component) {
 				// Count consecutive occurrences of this component letter
 				count := 0
 				j := i
-				for j < len(format) && format[j] == component[0] {
+				componentRune := rune(component[0])
+				for j < len(runes) && runes[j] == componentRune {
 					count++
 					j++
 				}
@@ -3230,52 +3248,119 @@ func filterDateFormat(format string, components []string) string {
 				// Add the component pattern (e.g., "MMM" or "d")
 				result += strings.Repeat(component, count)
 				i = j
-				kept = true
+				componentMatched = true
+				componentFound = true
 				break
 			}
 		}
 
-		if kept {
+		if componentMatched {
 			continue
 		}
 
-		// Check if this is a separator or other non-component character
-		// Keep separators that appear between components we want
-		if char == ' ' || char == ',' || char == '/' || char == '-' || char == '.' {
-			// Look ahead and behind to see if we're between wanted components
-			hasComponentBefore := false
-			hasComponentAfter := false
-
-			// Check before
-			for j := i - 1; j >= 0; j-- {
-				if format[j] == ' ' || format[j] == ',' || format[j] == '/' || format[j] == '-' || format[j] == '.' {
-					continue
-				}
-				for _, component := range components {
-					if format[j] == component[0] {
-						hasComponentBefore = true
-						break
-					}
-				}
-				break
+		// Check if this character is NOT a component we want to filter out
+		isUnwantedComponent := false
+		for j := i; j < len(runes); j++ {
+			// Look for potential component patterns starting at current position
+			if runes[j] < 'A' || runes[j] > 'z' || (runes[j] > 'Z' && runes[j] < 'a') {
+				break // Not a letter, so not a component pattern
 			}
 
-			// Check after
-			for j := i + 1; j < len(format); j++ {
-				if format[j] == ' ' || format[j] == ',' || format[j] == '/' || format[j] == '-' || format[j] == '.' {
-					continue
+			// Check if this forms a component pattern we don't want
+			componentChar := string(runes[j])
+			isWantedComponent := false
+			for _, wanted := range components {
+				if wanted == componentChar {
+					isWantedComponent = true
+					break
 				}
-				for _, component := range components {
-					if format[j] == component[0] {
-						hasComponentAfter = true
-						break
-					}
-				}
-				break
 			}
 
-			// Keep separator if it's between components we want
-			if hasComponentBefore && hasComponentAfter {
+			if !isWantedComponent {
+				// This looks like an unwanted component (consecutive same letters)
+				k := j
+				for k < len(runes) && runes[k] == runes[j] {
+					k++
+				}
+				if k > j {
+					// Skip this unwanted component
+					i = k
+					isUnwantedComponent = true
+					break
+				}
+			}
+			break
+		}
+
+		if isUnwantedComponent {
+			continue
+		}
+
+		// Skip leading separators before any component is found
+		if !componentFound {
+			i++
+			continue
+		}
+
+		// Look ahead to see if there are more wanted components after this separator
+		hasComponentAfter := false
+		for j := i + 1; j < len(runes); j++ {
+			// Skip quoted sections
+			if runes[j] == '\'' {
+				j++
+				for j < len(runes) && runes[j] != '\'' {
+					j++
+				}
+				continue
+			}
+
+			// Check if this starts a component we want
+			for _, component := range components {
+				if strings.HasPrefix(string(runes[j:]), component) {
+					hasComponentAfter = true
+					break
+				}
+			}
+			if hasComponentAfter {
+				break
+			}
+		}
+
+		// Keep separator if there's a wanted component after it, or if it's a meaningful trailing separator
+		// Check if we just processed a component and this looks like its trailing separator
+		isMeaningfulTrailingSeparator := false
+		if !hasComponentAfter {
+			// Check if the result ends with any of our wanted components
+			justProcessedComponent := false
+			for _, component := range components {
+				if strings.HasSuffix(result, component) {
+					justProcessedComponent = true
+					break
+				}
+			}
+
+			if justProcessedComponent {
+				// For Unicode characters (like Chinese 年月日), always keep as meaningful
+				// For ASCII punctuation, only keep periods (Korean style) but not slashes, commas, spaces
+				if char > 127 || char == '.' {
+					isMeaningfulTrailingSeparator = true
+				}
+			}
+		}
+
+		if hasComponentAfter || isMeaningfulTrailingSeparator {
+			// For month-year combinations, convert commas to spaces
+			if isMonthYear && char == ',' {
+				// Convert comma to space, but avoid double spaces
+				if len(result) > 0 && result[len(result)-1] != ' ' {
+					result += " "
+				}
+				// Skip any following spaces to avoid double spaces
+				for i+1 < len(runes) && runes[i+1] == ' ' {
+					i++
+				}
+			} else {
+				// Keep all other separators and literal characters
 				result += string(char)
 			}
 		}

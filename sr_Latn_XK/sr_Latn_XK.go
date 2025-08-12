@@ -552,6 +552,8 @@ func (sr *sr_Latn_XK) FmtMonthDayMedium(t time.Time) string {
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
 
+	b = append(b, []byte{0x2e}...)
+
 	return string(b)
 }
 
@@ -573,6 +575,8 @@ func (sr *sr_Latn_XK) FmtMonthYearMedium(t time.Time) string {
 	} else {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
+
+	b = append(b, []byte{0x2e}...)
 
 	return string(b)
 }

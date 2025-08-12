@@ -441,7 +441,9 @@ func (zh *zh_Hant_MO) FmtMonthDayMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
+	b = append(b, []byte{0xe6, 0x9c, 0x88}...)
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
+	b = append(b, []byte{0xe6, 0x97, 0xa5}...)
 
 	return string(b)
 }
@@ -457,7 +459,9 @@ func (zh *zh_Hant_MO) FmtMonthYearMedium(t time.Time) string {
 		b = strconv.AppendInt(b, int64(-t.Year()), 10)
 	}
 
+	b = append(b, []byte{0xe5, 0xb9, 0xb4}...)
 	b = strconv.AppendInt(b, int64(t.Month()), 10)
+	b = append(b, []byte{0xe6, 0x9c, 0x88}...)
 
 	return string(b)
 }

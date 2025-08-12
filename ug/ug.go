@@ -509,6 +509,7 @@ func (ug *ug) FmtMonthDayMedium(t time.Time) string {
 	b = strconv.AppendInt(b, int64(t.Day()), 10)
 	b = append(b, []byte{0x2d}...)
 	b = append(b, ug.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0xd8, 0x8c}...)
 
 	return string(b)
 }
@@ -519,6 +520,7 @@ func (ug *ug) FmtMonthYearMedium(t time.Time) string {
 	b := make([]byte, 0, 32)
 
 	b = append(b, ug.monthsAbbreviated[t.Month()]...)
+	b = append(b, []byte{0xd8, 0x8c, 0x20}...)
 
 	if t.Year() > 0 {
 		b = strconv.AppendInt(b, int64(t.Year()), 10)
