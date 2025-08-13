@@ -337,63 +337,26 @@ func getCurrencyMappingForLocale(locale string) CurrencyMapping {
 	// Normalize locale to lowercase for comparison
 	localeKey := strings.ToLower(locale)
 
-	// Check if locale is fr_CA (special case - treated as French but with different USD/AUD format)
-	if localeKey == "fr_ca" {
+	// Check if locale is GB-related (United Kingdom), such as en_GB
+	if strings.HasSuffix(localeKey, "_gb") {
 		return CurrencyMapping{
-			CAD: "$",   // CAD -> $
-			USD: "$US", // USD -> $US
-			AUD: "$AU", // AUD -> $AU
-			GBP: "£",   // GBP -> £
-			EUR: "€",   // EUR -> €
-		}
-	}
-
-	// Check if locale is French-related (but not fr_CA)
-	if strings.HasPrefix(localeKey, "fr") {
-		return CurrencyMapping{
-			CAD: "$CA", // CAD -> $CA
-			USD: "$US", // USD -> $US
-			AUD: "$AU", // AUD -> $AU
-			GBP: "£",   // GBP -> £
-			EUR: "€",   // EUR -> €
-		}
-	}
-
-	// Check if locale is CA-related (Canada), such as en_CA
-	if strings.HasSuffix(localeKey, "_ca") {
-		return CurrencyMapping{
-			CAD: "$",   // CAD -> $
-			USD: "US$", // USD -> US$
-			AUD: "AU$", // AUD -> AU$
-			GBP: "£",   // GBP -> £
-			EUR: "€",   // EUR -> €
-		}
-	}
-
-	// Check if locale is AU-related (Australia)
-	if strings.HasSuffix(localeKey, "_au") {
-		return CurrencyMapping{
-			CAD: "CA$", // CAD -> CA$
-			USD: "US$", // USD -> US$
-			AUD: "$",   // AUD -> $
-			GBP: "£",   // GBP -> £
-			EUR: "€",   // EUR -> €
+			GBP: "£", // GBP -> £
+			EUR: "€", // EUR -> €
 		}
 	}
 
 	// Check if locale is US-related (United States)
 	if strings.HasSuffix(localeKey, "_us") || strings.HasSuffix(localeKey, "_us_posix") {
 		return CurrencyMapping{
-			CAD: "CA$", // CAD -> CA$
-			USD: "$",   // USD -> $
-			AUD: "AU$", // AUD -> AU$
-			GBP: "£",   // GBP -> £
-			EUR: "€",   // EUR -> €
+			USD: "$", // USD -> $
+			EUR: "€", // EUR -> €
 		}
 	}
 
 	// No default mapping for other locales - return empty mapping
-	return CurrencyMapping{}
+	return CurrencyMapping{
+		EUR: "€", // EUR -> €
+	}
 }
 
 // applyCurrencyOverrides applies currency symbol overrides based on locale
