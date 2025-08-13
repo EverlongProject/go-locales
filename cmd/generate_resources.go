@@ -345,22 +345,6 @@ func getCurrencyMappingForLocale(locale string) CurrencyMapping {
 		}
 	}
 
-	// Check if locale is CA-related (Canada), such as en_CA
-	if strings.HasSuffix(localeKey, "_ca") {
-		return CurrencyMapping{
-			CAD: "$", // CAD -> $
-			EUR: "€", // EUR -> €
-		}
-	}
-
-	// Check if locale is AU-related (Australia)
-	if strings.HasSuffix(localeKey, "_au") {
-		return CurrencyMapping{
-			AUD: "$", // AUD -> $
-			EUR: "€", // EUR -> €
-		}
-	}
-
 	// Check if locale is US-related (United States)
 	if strings.HasSuffix(localeKey, "_us") || strings.HasSuffix(localeKey, "_us_posix") {
 		return CurrencyMapping{

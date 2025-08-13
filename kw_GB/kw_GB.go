@@ -85,10 +85,10 @@ func (kw *kw_GB) PluralsRange() []locales.PluralRule {
 func (kw *kw_GB) CardinalPluralRule(num float64, v uint64) locales.PluralRule {
 
 	n := math.Abs(num)
-	nMod100 := math.Mod(n, 100)
-	nMod1000 := math.Mod(n, 1000)
 	nMod100000 := math.Mod(n, 100000)
 	nMod1000000 := math.Mod(n, 1000000)
+	nMod100 := math.Mod(n, 100)
+	nMod1000 := math.Mod(n, 1000)
 
 	if n == 0 {
 		return locales.PluralRuleZero
