@@ -1,28 +1,21 @@
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 jobs:
   snyk-go:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Set up Go
-        uses: actions/setup-go@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
         with:
-          go-version: '1.24' # match project’s go.mod
-      - name: Install dependencies
-        run: go mod tidy
-      - name: Run Snyk test
-        uses: snyk/actions/golang@master
+          go-version-file: go.mod
+      - uses: snyk/actions/golang@0.4.0
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: test
-      - name: Run Snyk monitor
-        uses: snyk/actions/golang@master
+      - uses: snyk/actions/golang@0.4.0
+        if: github.event_name == 'push'
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
